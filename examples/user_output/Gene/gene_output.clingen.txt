@@ -1,0 +1,5 @@
+ClinGen.Gene	ClinGen.Disease	ClinGen.Inheritance	ClinGen.MONDO	ClinGen.Classification
+BRCA1	Fanconi anemia, complementation group S	AR	0054748	Definitive 
+BRCA1	BRCA1-related cancer predisposition	AD	0700268	Definitive 
+BRCA1	breast-ovarian cancer, familial, susceptibility to, 1		0011450	
+BRCA1	hereditary breast ovarian cancer syndrome		0003582	
