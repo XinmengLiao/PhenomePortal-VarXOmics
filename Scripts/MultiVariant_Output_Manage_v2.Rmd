@@ -1,0 +1,331 @@
+---
+title: "output.manage"
+author: "Xinmeng Liao"
+date: "2025-05-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyverse)
+library(data.table)
+library(epigraphdb)
+library(httr)
+library(jsonlite)
+library(visNetwork)
+library(epigraphdb)
+for (i in c("select","filter", "mutate","rename", "left_join", "slice")){
+  conflicted::conflict_prefer(i, "dplyr")
+}
+rm(i)
+conflicted::conflicts_prefer(stats::sd)
+conflicted::conflicts_prefer(httr::content)
+conflicted::conflicts_prefer(plotly::layout)
+
+```
+
+# load files
+```{r}
+result_file <- "/Users/xinmengliao/Documents/Project/20250516_Webserver/Case_Study/Healthy/WBWG_01_P001_30.nodup.txt"
+result <- read.csv(result_file,header = T,sep = "\t")
+
+colnames(result) <- gsub("am_","AlphaMissense_", colnames(result))
+
+result <- result %>% 
+  mutate(rsID = sapply(strsplit(split = "&", Existing_variation),`[`,1)) %>% 
+  mutate(rsID = if_else(grepl("^rs", rsID,fixed = F), rsID, NA)) %>% unique() 
+```
+
+
+# load database file 
+```{r}
+genedb <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/InhouseDB/InhouseDB.txt",header = T,sep = "\t")
+otg <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/Open_Targets_Genetics/OTG.scores.txt",header = T,sep = "\t") %>% select(-OTG.gene_id) 
+eqtl.score <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/eQTL.combined.score.txt",header = T,sep = "\t")
+pqtl.score <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/eQTL.pQTL.score.withoutHPO.txt",header = T,sep = "\t")
+pqtl.score.hpo <-  read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/eQTL.pQTL.score.HPO.txt",header = T,sep = "\t")
+hpo.id <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/usr_input/user_input_hpoID.txt",
+                   header = F,sep = "\t",colClasses = "character") %>% as.character()
+hpo <- ifelse(length(hpo.id) == 1, T, F)
+user_trait_file <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Case_Study/Healthy/WBWG_01_P001_30.traits.txt",header = T,sep = "\t",quote = "")
+output_file <- "/Users/xinmengliao/Documents/Project/20250516_Webserver/usr_output/Variant/MultiVariant/multivariant_output.txt"
+```
+
+# Functions
+```{r}
+# Normalize score
+normalize_minmax <- function(x) {
+  if (length(unique(x)) == 1) {
+    return(rep(0, length(x)))
+  }
+  (x - min(x, na.rm = TRUE)) / (max(x, na.rm = TRUE) - min(x, na.rm = TRUE))
+}
+
+#pQTL information
+# pQTL MR, and information, and scores
+# EpiGraphDB contains the MR resutls, only for table and network 
+# pQTL scores only come from Open Target Genetics
+pqtl.score.fun <- function(data){
+  cols <- c('expID','outID','outID_mrbase','nsnp','pvalue','rsID','direction',
+         'steiger_pvalue','coloc_prob','beta','method','trans_cis','q_pvalue','ld_check','se')
+  pqtl_tpm_df = as_tibble(setNames(as.list(rep(NA, length(cols))), cols))
+  
+  for (i in unique(data$rsID)){
+    rela.pro <- pqtl_pleio(rsid =  i)
+    if(nrow(rela.pro) > 0){
+      for (j in 1:nrow(rela.pro)){
+        pqtl_tpm <- pqtl(query = rela.pro$expID[j], searchflag = "proteins",rtype = "mrres",pvalue = 1) 
+        pqtl_tpm_df <- rbind(pqtl_tpm_df, pqtl_tpm)
+      }
+    }
+  }
+  
+ colnames(pqtl_tpm_df) <- paste0("EpiGraphDB-",colnames(pqtl_tpm_df) )
+
+ # Open Target Genetics
+ final.data<- data %>% 
+  left_join(., pqtl_tpm_df, by = c("variant_info" = "EpiGraphDB-rsID")) %>% unique() %>% 
+  left_join(., otg, by = "variant_info") %>% unique() 
+ 
+ return(final.data)
+}
+
+# ClinVar phenotypes equal to HPO terms
+check_phenotype_match <- function(clinvar_string, hpo_term) {
+  hpo_words <- toupper(unlist(strsplit(hpo_term, " ")))
+  clinvar.phenotypes <- unlist(strsplit(clinvar_string, "\\|")) 
+  
+  for (p in clinvar.phenotypes) {
+    p_words <- toupper(unlist(strsplit(p, " ")))
+    
+    if (all(hpo_words %in% p_words)) {
+      return("matched")
+    }
+  }
+  
+  return(NA)
+}
+
+result <- pqtl.score.fun(result)
+```
+
+# Without HPO
+```{r}
+if (hpo == F){
+  # final score
+  result_score_final <- result %>% 
+    left_join(., eqtl.score, by = c("variant_info")) %>% 
+    left_join(., pqtl.score, by = c("variant_info")) %>%
+  mutate(final.eqtl.normal.score = as.numeric(replace_na(final.eqtl.normal.score, 0)),
+         final.pqtl.normal.score = as.numeric(replace_na(final.pqtl.normal.score, 0)),
+         Prediction_score = 0.6 * Prediction_score, 
+         priortize.score = Pathogenicity_score + Prediction_score + AF_score + final.eqtl.normal.score + final.pqtl.normal.score) %>% distinct()
+  
+  final_result <- result_score_final %>% 
+      left_join(., genedb, by = c("SYMBOL" = "Genes")) %>% unique() %>% 
+    arrange(desc(priortize.score))
+   
+  write.table(final_result, gsub("txt","basicinfo.txt",output_file),quote = F,sep = "\t",row.names = F)
+}
+
+```
+
+# with HPO
+```{r}
+if (hpo == T){
+  pheno2gene.url <- paste0("https://phen2gene.wglab.org/api?HPO_list=HP:", hpo.id)
+  hpo.url <- paste0("https://ontology.jax.org/api/hp/terms/HP%3A",hpo.id)
+
+  # API
+  response1 <- GET(pheno2gene.url)
+  response2 <- GET(hpo.url)
+  
+  if (status_code(response1) == 200 & status_code(response2) == 200) {
+    parsed1 <- fromJSON(content(response1, as = "text", encoding = "UTF-8"))
+    parsed2 <- fromJSON(content(response2, as = "text", encoding = "UTF-8"))
+    hpo_term <- parsed2$name  %>% as.character()
+    pheno2gene_df <- parsed1$results %>%
+      select(Gene, Rank, Score) %>% 
+      rename(Pheno2Gene.Rank = Rank, Pheno2Gene.Score = Score) %>%
+      mutate(Pheno2Gene.Score = as.numeric(Pheno2Gene.Score))
+    result_pheno2gene <- result %>% 
+      left_join(., pheno2gene_df , by = c( "SYMBOL" = "Gene")) %>% unique() %>% 
+      mutate(HPO.term = hpo_term,
+             Pheno2Gene.Score = replace_na(Pheno2Gene.Score, 0)) 
+    
+    result_score_final <- result_pheno2gene %>%
+      # match with ClinVar Phenotypes and change the scores
+      mutate(matched.clinvar = sapply(ClinVar_CLNDN, check_phenotype_match, hpo_term = hpo_term)) %>%
+      mutate(Pathogenicity_score = if_else(is.na(matched.clinvar), Pathogenicity_score * 0.33, Pathogenicity_score)) %>% 
+      # combine with the hpo eqtl and pqtl scores
+      left_join(., eqtl.score, by = c("variant_info","SYMBOL" = "Genes")) %>% 
+      left_join(., pqtl.score.hpo, by = c("variant_info","SYMBOL" = "Genes")) %>% 
+      mutate(final.eqtl.normal.score = as.numeric(replace_na(final.eqtl.normal.score, 0)),
+             final.pqtl.normal.score = as.numeric(replace_na(final.pqtl.normal.score, 0)),
+             priortize.score = as.numeric(Pathogenicity_score) +
+                              as.numeric(Prediction_score) +
+                              as.numeric(AF_score) +
+                              final.eqtl.normal.score +
+                              final.pqtl.normal.score +
+                              as.numeric(Pheno2Gene.Score)) %>% 
+                distinct()
+    
+    final_result <- result_score_final %>% 
+      left_join(., genedb, by = c("SYMBOL" = "Genes")) %>% unique()
+   
+    write.table(result_score_final, gsub("nodup.txt","nodup.txt",result_file),
+                quote = F,sep = "\t",row.names = F)
+   
+  } else {
+    cat("Error:", status_code(response), "\n")
+  }
+}
+
+```
+
+# check results
+```{r}
+final.df <- final_result %>% 
+  select(variant_info, SYMBOL,MAX_AF,AF_score,final.eqtl.normal.score,Disease,Category,
+          final.pqtl.normal.score,
+         #Pheno2Gene.Score,
+         ClinVar_CLNDN, Pathogenicity_score,ClinVar_score, ACMG_score,acmg_classification,
+         Prediction_score,Consequence,
+         priortize.score) %>% unique() %>% 
+  arrange(desc(priortize.score))
+```
+
+
+# GWAS and PGx Information Table
+```{r}
+gwas <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/gwas_catalog_v1.0-associations_e113_r2025-04-28.tsv",header = T,sep = "\t",quote = "") %>% 
+  mutate(Risk.allele = sapply(strsplit(split = "-",STRONGEST.SNP.RISK.ALLELE),`[`,2))
+pharmgkb_data <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/PharmGKB/clinical_annotation_combined.txt",header = T,sep = "\t") 
+
+gwas.df <- result %>% 
+  select(variant_info, rsID, REF,ALT, SYMBOL) %>% unique() %>% 
+  left_join(.,gwas, by = c("rsID" = "SNPS")) %>% unique() %>% 
+  filter(Risk.allele == REF | Risk.allele == ALT) %>% unique() %>% 
+  select(variant_info, rsID, SYMBOL, DISEASE.TRAIT, Risk.allele,"RISK.ALLELE.FREQUENCY" , P.VALUE, OR.or.BETA, "X95..CI..TEXT." ,LINK) %>% 
+  rename(Gene = SYMBOL, `Risk Allele` = Risk.allele, `Disease/Trait` = DISEASE.TRAIT,`Risk Allele Frequency` = RISK.ALLELE.FREQUENCY,
+         Pvalue = P.VALUE, `Odd ratio/Beta` = OR.or.BETA, `95% CI` = "X95..CI..TEXT.", Link = LINK) %>%  
+  mutate(`95% CI` = str_extract(`95% CI`, "(?<=\\[)[^\\]]+(?=\\])"))
+write.table(gwas.df, gsub("txt","gwas.txt",output_file),quote = F,sep = "\t",row.names = F)
+
+pgx.df <- result %>% 
+  select(variant_info, rsID, SYMBOL) %>% 
+  left_join(.,pharmgkb_data, by = c("rsID" = "Variant.Haplotypes", "SYMBOL" = "Gene")) %>% unique() %>% 
+  filter(!is.na(Drug.s.))
+
+result.pgx <- result %>% 
+  select(variant_info) %>% 
+  left_join(.,pgx.df, by = "variant_info") %>% unique() %>% 
+  rename(pgx.rsID = rsID) %>% 
+  na.omit(Drug.s.)
+  
+write.table(result.pgx, gsub("txt","pgx.txt",output_file),quote = F,sep = "\t",row.names = F)
+
+```
+
+# Network generation
+```{r}
+# 1. variant - gene (from raw data)
+# 2. variant - drug (PharmGKB)
+# 3. variant - gene (eQTL, qval)
+# 4. variant - gene (pQTL, pval)
+# 5. gene -drug (DGIdb)
+# 6. gene - gene (String)
+# 7. variant - phenotype (raw data, GWAS, MR)
+
+# network.df (source, target, interaction type, score)
+
+# 1. variant - gene (from raw data)
+vg.raw <- result_score_final %>% select(variant_info, rsID, SYMBOL) %>% unique() %>% 
+  mutate(Type = "Variant-Gene-Original", Weight = 0,
+         from.type = "Variant", to.type = "Gene",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = SYMBOL) %>% select(from, from.type, to, to.type, Type, Weight)
+
+# 2. variant - drug (PharmGKB)
+vd.pharm <- result.pgx %>% select(variant_info, pgx.rsID, Drug.s.) %>% unique() %>% 
+  mutate(Type = "Variant-Drug", Weight = 0,
+         from.type = "Variant", to.type = "Drug",
+         from = paste(variant_info, pgx.rsID, sep = ",")) %>% 
+  rename(to = Drug.s.) %>% select(from, from.type, to, to.type, Type, Weight) %>% 
+  filter(!is.na(to))
+
+# 3. variant - gene (eQTL, qval)
+vg.eqtl.catalog <- result %>% select(variant_info, rsID,eQTL_Catalog_Gene.name, eQTL_Catalog_p_beta) %>% unique() %>% 
+  mutate(Type = "eQTL", from.type = "Variant", to.type = "Gene",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = eQTL_Catalog_Gene.name,Weight = eQTL_Catalog_p_beta,) %>% select(from, from.type, to, to.type, Type, Weight) %>% 
+  filter(!is.na(to)) 
+vg.eqtl.gtex <- result %>% select(variant_info, rsID,eQTL_GTEx_gene_name, eQTL_GTEx_qval) %>% unique() %>% 
+  mutate(Type = "eQTL", from.type = "Variant", to.type = "Gene",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = eQTL_GTEx_gene_name,Weight = eQTL_GTEx_qval,) %>% select(from, from.type, to, to.type, Type, Weight) %>% 
+  filter(!is.na(to)) 
+vg.eqtl <- rbind(vg.eqtl.catalog, vg.eqtl.gtex)
+
+# 4. variant - gene (pQTL, pval)
+vg.pqtl <- result %>% select(variant_info, rsID,OTG.pqtl.gene, OTG.pqtl_pval) %>% unique() %>% 
+  mutate(Type = "pQTL", from.type = "Variant", to.type = "Protein",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = OTG.pqtl.gene,Weight = OTG.pqtl_pval,) %>% select(from, from.type, to, to.type, Type, Weight) %>% 
+  filter(!is.na(to))
+
+# 5. gene - drug (DGIdb)
+dgi <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/DGIdb/interactions.tsv",
+                header = T,sep = "\t") %>% 
+  select(gene_claim_name, drug_claim_name,interaction_score)
+gd.dgi <- dgi %>% rename(from = gene_claim_name, to = drug_claim_name, Weight = interaction_score) %>% 
+  mutate(Type = "Gene-Drug",from.type = "Gene", to.type = "Drug") %>%
+  select(from, from.type, to, to.type, Type, Weight) %>% unique() %>% 
+  right_join(., result %>% select(SYMBOL), by = c("from" = "SYMBOL")) %>% unique() %>% 
+  na.omit(to) %>% 
+  mutate(Weight = if_else(is.na(Weight) |Weight == "NULL", "0", Weight)) %>% 
+  mutate(Weight = as.numeric(Weight))
+
+# 6. gene - gene (String)
+involved.genes <- c(vg.raw %>% pull(to),vg.eqtl %>% pull(to), vg.pqtl %>% pull(to), gd.dgi %>% pull(from)) %>% unique()
+string <- fread("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/String/String.all.score.txt",
+                header = T,sep = "\t")
+gg.string <- string %>% select(protein1, protein2, combined_score) %>% 
+  mutate(Type = "PPI",from.type = "Protein", to.type = "Protein",
+         combined_score = combined_score/1000 ) %>% 
+  filter(protein1 %in% involved.genes & protein2 %in% involved.genes) %>% 
+  rename(from = protein1, to = protein2, Weight = combined_score) %>% select(from, from.type, to, to.type, Type, Weight) %>% unique()
+
+# 7. variant - phenotype (raw data, GWAS, MR)
+vp.raw <- result_score_final %>% select(variant_info, rsID, ClinVar_CLNDN) %>% unique() %>% 
+  mutate(Type = "Variant-Phenotype-Original", Weight = 0,
+         from.type = "Variant", to.type = "Phenotype",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = ClinVar_CLNDN) %>% select(from, from.type, to, to.type, Type, Weight)
+
+vp.gwas <- gwas.df %>% select(variant_info, rsID, `Disease/Trait`,Pvalue) %>% unique() %>% 
+  mutate(Type = "Variant-Phenotype-GWAS", Weight = Pvalue,
+         from.type = "Variant", to.type = "Phenotype",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = `Disease/Trait`) %>% select(from, from.type, to, to.type, Type, Weight)
+
+vp.mr1 <- result %>% select(variant_info, rsID,`EpiGraphDB-expID`,`EpiGraphDB-q_pvalue`) %>% unique() %>% 
+  mutate(Type = "Variant-Phenotype-GWAS", Weight = `EpiGraphDB-q_pvalue`,
+         from.type = "Variant", to.type = "Gene",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = `EpiGraphDB-expID`) %>% select(from, from.type, to, to.type, Type, Weight)
+
+vp.mr2 <- result %>% select(variant_info, rsID,`EpiGraphDB-outID`,`EpiGraphDB-q_pvalue`) %>% unique() %>% 
+  mutate(Type = "Variant-Phenotype-GWAS", Weight = `EpiGraphDB-q_pvalue`,
+         from.type = "Variant", to.type = "Phenotype",
+         from = paste(variant_info, rsID, sep = ",")) %>% 
+  rename(to = `EpiGraphDB-outID`) %>% select(from, from.type, to, to.type, Type, Weight)
+vp.mr <- rbind(vp.mr1, vp.mr2) %>% filter(!is.na(to))
+
+all <- rbind(vg.raw, vd.pharm, vg.eqtl, vg.pqtl, gd.dgi,gg.string,vp.mr) %>% na.omit(Type) %>% 
+  mutate(from = gsub(",NA","",from))
+#simple <- all %>% filter(Type == "Variant-Gene-Original" | Type == "Variant-Drug")
+unique(all$Type)
+
+write.table(all,gsub("txt","network.txt",output_file),quote = F,sep = "\t",row.names = F)
+```

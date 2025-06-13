@@ -1,0 +1,345 @@
+---
+title: "output.manage"
+author: "Xinmeng Liao"
+date: "2025-05-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+library(dplyr)
+library(tidyverse)
+library(data.table)
+library(epigraphdb)
+library(httr)
+library(jsonlite)
+library(visNetwork)
+for (i in c("select","filter", "mutate","rename", "left_join", "slice")){
+  conflicted::conflict_prefer(i, "dplyr")
+}
+rm(i)
+conflicted::conflicts_prefer(stats::sd)
+conflicted::conflicts_prefer(httr::content)
+conflicted::conflicts_prefer(plotly::layout)
+
+```
+
+# load files
+```{r}
+result_file <- "/Users/xinmengliao/Documents/Project/20250516_Webserver/usr_input/user_input_gene.txt"
+clinvar.data <- fread("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/ClinVar/clinvar_20250504.simplify.txt", header = TRUE, sep = "\t")
+clingen.data <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/Clingen/ClingenforGene.txt", header = TRUE, sep = "\t")
+gencc.data <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/GenCC/GenCCforGene.txt", header = TRUE, sep = "\t", colClasses = "character")
+dgi <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/DGIdb/interactions.tsv",header = T,sep = "\t")
+string <- fread("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/String/String.all.score.txt",header = T,sep = "\t")
+output_file <- "/Users/xinmengliao/Documents/Project/20250516_Webserver/usr_output/Gene/gene_output.txt"
+hpa.con.data <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/HPA/rna_tissue_consensus.tsv", header = TRUE, sep = "\t")
+hpa.data <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/HPA/rna_tissue_hpa.tsv", header = TRUE, sep = "\t")
+inhousedb <- read.csv("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/InhouseDB/InhouseDB.txt",header = T,sep = "\t")
+
+gene <- read.csv(result_file, header = FALSE,quote = "",sep = "\t") %>% select(1) %>% as.character()
+letter <- unlist(strsplit(split = "",gene))[1]
+eqtl.catalog <- fread(
+  paste0("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/xQTL/eQTL_Catalogue/forSingleGene/genes_",letter,".txt"),
+  header = T,sep = "\t") %>% 
+  filter(Gene.name == gene)
+eqtl.gtex <- read.csv(
+  paste0("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/GTEx/forSingleGene/genes_",letter,".txt"),
+  header = T,sep = "\t") %>% 
+  filter(gene_name == gene)
+
+
+```
+
+# Expression data for figures
+```{r}
+gtex.tpm.file <- fread(
+  paste0("/Users/xinmengliao/Documents/Project/20250516_Webserver/Datasets/GTEx/TPM_letter/", letter, ".combined.tpm.txt"),
+  header = T,sep = "\t") %>% 
+  filter(Description == gene) %>% 
+  rename(Gene = Description) %>% 
+  mutate(Source = "GTEx.v10") %>% select(Gene, TPM, Tissue,Source)
+
+hpa.con <- hpa.con.data %>% 
+  filter(Gene.name == gene) %>% select(-Gene) %>% 
+  rename(Gene = Gene.name, TPM = nTPM) %>% mutate(Source = "HPA and GTXv8")
+
+hpa <- hpa.data %>% 
+  filter(Gene.name == gene) %>% select(Gene.name, Tissue, nTPM) %>% 
+  rename(Gene = Gene.name, TPM = nTPM) %>% mutate(Source = "HPA")
+
+final.expression.df <- rbind(gtex.tpm.file, hpa.con, hpa)
+write.table(final.expression.df, gsub("txt","expression.txt",output_file), quote = F,sep = "\t",row.names = F)
+
+gtex.p <- ggplot(gtex.tpm.file, aes(x = Tissue, y = TPM, fill = Tissue)) +
+      geom_boxplot(alpha = 0.8) +
+      labs(
+        title = paste0(gene, " Expression Levels Across 54 Tissues from GTEx v10"),
+        y = "TPM",
+        x = "Tissue"
+      ) +
+      theme_minimal() +
+      theme(
+        legend.position = "none",
+        axis.text.x = element_text(angle = 270, vjust = 0.5, hjust = 0, size = 10),
+        axis.text.y = element_text(size = 10),
+        axis.title = element_text(size = 12, face = "bold"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = "white", color = NA),
+        panel.background = element_rect(fill = "white", color = NA)
+      )
+
+ggsave(gtex.p, filename = gsub(".txt",".gtexv10.png",output_file),width = 30, height = 15, dpi = 300)
+rm(gtex.p, gtex.tpm.file)
+
+hpa.con.p <- ggplot(hpa.con, aes(x = Tissue, y = TPM, fill = Tissue)) +
+      geom_col(alpha = 0.8) +
+      labs(
+        title = paste0(gene,  " Expression Levels Across 50 Tissues from Human Protein Atlas and GTEx v8"),
+        x = "Tissue",
+        y = "Normalized TPM"
+      ) +
+      theme_minimal() +
+      theme(
+        legend.position = "none",
+        axis.text.x = element_text(angle = 270, hjust = 0, vjust = 0.5, size = 10),
+        axis.text.y = element_text(size = 10),
+        axis.title = element_text(size = 12, face = "bold"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = "white", color = NA),
+        panel.background = element_rect(fill = "white", color = NA)
+      )
+
+ggsave(hpa.con.p, filename = gsub(".txt",".hpacon.png",output_file),width = 30, height = 15,units = "cm",dpi = 300)
+
+hpa.p <- ggplot(hpa, aes(x = Tissue, y = TPM, fill = Tissue)) +
+      geom_col(alpha = 0.8) +
+      labs(
+        title = paste0(gene,  " Expression Levels Across 50 Tissues from Human Protein Atlas"),
+        x = "Tissue",
+        y = "Normalized TPM"
+      ) +
+      theme_minimal() +
+      theme(
+        legend.position = "none",
+        axis.text.x = element_text(angle = 270, hjust = 0, vjust = 0.5, size = 10),
+        axis.text.y = element_text(size = 10),
+        axis.title = element_text(size = 12, face = "bold"),
+        panel.grid.major.x = element_blank(),
+        panel.grid.minor = element_blank(),
+        plot.background = element_rect(fill = "white", color = NA),
+        panel.background = element_rect(fill = "white", color = NA)
+      )
+
+ggsave(hpa.p, filename = gsub(".txt",".hpa.png",output_file),width = 30, height = 15,units = "cm",dpi = 300)
+
+rm(hpa.con,hpa.con.data,hpa.data,hpa, hpa.con.p, hpa.p)
+gc()
+
+```
+
+# Basic information: combine ClinVar, ClinGen, GenCC
+```{r}
+# ClinVar
+gene.df <- clinvar.data %>% 
+  filter(str_detect(GENEINFO, gene))
+
+if(nrow(gene.df) == 0){
+  col_names <- c('CHROM','POS','REF','ALT','ALLELEID','Diseases sources',
+                 'Diseases','HGVS','Review Criteria','Pathogenicity','CLNSIGSCV',
+                 'Variant Type','CLNVCSO','Gene','MC','ORIGIN','rsID','Review Star','variant_info')
+  gene.df <- as.data.frame(matrix(NA, nrow = 1, ncol = length(col_names)))
+  names(gene.df) <- col_names
+  gene.df$Gene = gene
+}else{
+  gene.df <- gene.df %>% 
+    separate_rows(GENEINFO, sep = "\\|") %>%
+    filter(str_detect(GENEINFO, gene)) %>%
+    mutate(Variant = paste(CHROM, POS, REF, ALT, sep = "_"),
+           Variant = paste0("chr", Variant)) %>% 
+    mutate(GENEINFO = sapply(strsplit(split = ":",GENEINFO),`[`,1)) %>% unique() %>% 
+    rename(`Diseases sources` = CLNDISDB, Diseases = CLNDN, HGVS = CLNHGVS, `Review Criteria` = CLNREVSTAT, Pathogenicity = CLNSIG, 
+           `Variant Type` = CLNVC, Gene = GENEINFO, rsID = RS, `Review Star` = Review.Status, variant_info = Variant) %>% 
+    mutate(Pathogenicity = gsub("_", " ", Pathogenicity)) %>% unique()
+}
+
+write.table(gene.df, gsub("txt","clinvar.txt",output_file), quote = F,sep = "\t",row.names = F)
+
+
+# ClinGen
+clingen.data <- clingen.data %>%
+  filter(Gene == gene) %>% unique() %>% 
+  select(Gene, Disease, Inheritance,MONDO, Classification,)
+colnames(clingen.data) <- paste0("ClinGen.",colnames(clingen.data))
+
+write.table(clingen.data, gsub("txt","clingen.txt",output_file), quote = F,sep = "\t",row.names = F)
+# 
+# if(nrow(clingen.data) > 0){
+#   gene.df2 <- gene.df %>% left_join(., clingen.data, by = c("Gene" = "ClinGen.Gene")) %>% unique()
+# }else{
+#   tmp <- as.data.frame(matrix(NA, nrow = nrow(gene.df), ncol = 5))
+#   colnames(tmp) <- c('ClinGen.Gene','ClinGen.Disease','ClinGen.Inheritance','ClinGen.MONDO','ClinGen.Classification')
+#   tmp$ClinGen.Gene <- gene
+#   gene.df2 <- cbind(gene.df, tmp)
+# }
+
+
+# GenCC
+gencc.data <- gencc.data %>% 
+  filter(Gene == gene) %>% unique()
+colnames(gencc.data) <- paste0("GenCC.",colnames(gencc.data))
+
+write.table(gencc.data, gsub("txt","genecc.txt",output_file), quote = F,sep = "\t",row.names = F)
+
+
+# if(nrow(gencc.data) > 0){
+#   gene.df3 <- gene.df2 %>% left_join(., gencc.data, by = c("Gene" = "GenCC.Gene")) %>% unique()
+# }else{
+#   tmp <- as.data.frame(matrix(NA, nrow = nrow(gene.df2), ncol = 6))
+#   colnames(tmp) <- c('GenCC.Gene','GenCC.Disease','GenCC.Inheritance','GenCC.Classification','GenCC.Disease.ID','GenCC.GENCC.ID')
+#   tmp$GenCC.Gene <- gene
+#   gene.df3 <- cbind(gene.df2, tmp)
+# }
+# 
+# write.table(gene.df3, gsub("txt","Gene_basicinfo.txt",output_file), quote = F,sep = "\t",row.names = F)
+rm(gencc.data, gene.df2, gene.df,clingen.data)
+```
+
+# xQTL: eQTL and pQTL
+```{r}
+# eQTL Catalog 
+colnames(eqtl.catalog) <- paste0("eQTL_Catalog.",colnames(eqtl.catalog))
+
+if(nrow(eqtl.catalog) > 0 ){
+  gene.df5 <- eqtl.catalog
+}else{
+  gene.df5 <- as.data.frame(matrix(NA, nrow = nrow(gene.df4), ncol = 15))
+  colnames(gene.df5) <- c('eQTL_Catalog.Gene.name','eQTL_Catalog.variant','eQTL_Catalog.n_traits','eQTL_Catalog.n_variants',
+                     'eQTL_Catalog.sample_group','eQTL_Catalog.tissue_label','eQTL_Catalog.pvalue','eQTL_Catalog.beta',
+                     'eQTL_Catalog.p_perm','eQTL_Catalog.p_beta','eQTL_Catalog.dataset_id','eQTL_Catalog.study_id',
+                     'eQTL_Catalog.sample_size','eQTL_Catalog.study_type','eQTL_Catalog.pmid')
+  gene.df5$eQTL_Catalog.Gene.name <- gene
+}
+
+
+# GTEx
+colnames(eqtl.gtex) <- paste0("eQTL_GTEx.",colnames(eqtl.gtex))
+
+if(nrow(eqtl.gtex) > 0 ){
+  gene.df6 <- gene.df5 %>% left_join(., eqtl.gtex, by = c("eQTL_Catalog.Gene.name" = "eQTL_GTEx.gene_name")) %>% unique()
+}else{
+  tmp <- as.data.frame(matrix(NA, nrow = nrow(gene.df5), ncol = 15))
+  colnames(tmp) <- c('eQTL_GTEx.gene_name','eQTL_GTEx.variant_id','eQTL_GTEx.ma_samples',
+                     'eQTL_GTEx.ma_count','eQTL_GTEx.af','eQTL_GTEx.pval_nominal','eQTL_GTEx.slope',
+                     'eQTL_GTEx.slope_se','eQTL_GTEx.pval_perm','eQTL_GTEx.pval_beta','eQTL_GTEx.qval',
+                     'eQTL_GTEx.pval_nominal_threshold','eQTL_GTEx.afc','eQTL_GTEx.afc_se','eQTL_GTEx.Tissue')
+  tmp$eQTL_Catalog.Gene.name <- gene
+  gene.df6 <- cbind(gene.df5, tmp)
+}
+
+# pQTL
+library(epigraphdb)
+pqtl_tpm <- pqtl(query = gene, searchflag = "proteins",rtype = "simple",pvalue = 1)
+
+if(nrow(pqtl_tpm) == 0){
+  col_names <- c('pQTL.Protein','pQTL.Disease/Phenotype','pQTL.pvalue','pQTL.rsID','pQTL.steiger_pvalue',
+                 'pQTL.coloc_prob','pQTL.beta','pQTL.method','pQTL.trans_cis',
+                 'pQTL.q_pvalue','pQTL.ld_check','pQTL.se')
+  tmp <- as.data.frame(matrix(NA, nrow = nrow(gene.df6), ncol = 12))
+  colnames(tmp) <- col_names
+  tmp$pQTL.Gene <- gene
+  gene.df7 <- cbind(gene.df6, tmp)
+}else{
+  pqtl_tpm <- pqtl_tpm %>% select(-outID_mrbase, -nsnp, -direction) 
+  colnames(pqtl_tpm) <- c('pQTL.Protein','pQTL.Disease/Phenotype','pQTL.pvalue','pQTL.rsID','pQTL.steiger_pvalue',
+                 'pQTL.coloc_prob','pQTL.beta','pQTL.method','pQTL.trans_cis',
+                 'pQTL.q_pvalue','pQTL.ld_check','pQTL.se')
+  gene.df7 <- gene.df6 %>% 
+    left_join(., pqtl_tpm, by = c("eQTL_Catalog.Gene.name" = "pQTL.Protein")) %>% unique()
+}
+
+write.table(gene.df7, gsub("txt","xqtl.txt",output_file),  quote = F,sep = "\t",row.names = F)
+
+```
+
+
+# DGIdb
+```{r}
+dgi <- dgi %>% 
+  filter(gene_name == gene) %>% unique()
+colnames(dgi) <- paste0("DGI.",colnames(dgi))
+
+if(nrow(dgi) > 0){
+  gene.df4 <- dgi
+}else{
+  gene.df4 <- as.data.frame(matrix(NA, nrow = 1, ncol = 13))
+  colnames(gene.df4) <- c('DGI.gene_claim_name','DGI.gene_concept_id','DGI.gene_name','DGI.interaction_source_db_name',
+                     'DGI.interaction_source_db_version','DGI.interaction_type','DGI.interaction_score','DGI.drug_claim_name',
+                     'DGI.drug_concept_id','DGI.drug_name','DGI.approved','DGI.immunotherapy','DGI.anti_neoplastic')
+  gene.df4$DGI.gene_name <- gene
+}
+
+write.table(gene.df4, gsub("txt","drug.txt",output_file),  quote = F,sep = "\t",row.names = F)
+```
+
+# Network generation
+```{r}
+# 1. gene - variant (eQTL, qval)
+# 2. gene - variant (MR, qval)
+# 4. gene -drug (DGIdb)
+# 5. gene - gene (String)
+
+# network.df (source, target, interaction type, score)
+
+# 1. gene - variant (eQTL, qval)
+gv.eqtl.catalog <- gene.df7 %>% select(eQTL_Catalog.Gene.name,eQTL_Catalog.variant,eQTL_Catalog.p_beta) %>% unique() %>%
+  filter(!is.na(eQTL_Catalog.Gene.name) & !is.na(eQTL_Catalog.variant)) %>%
+  mutate(Type = "eQTL", Weight = eQTL_Catalog.p_beta,
+         from = eQTL_Catalog.Gene.name) %>%
+  rename(to = eQTL_Catalog.variant) %>% select(from, to, Type, Weight)
+
+gv.eqtl.gtex <- gene.df7 %>% select(eQTL_Catalog.Gene.name,eQTL_GTEx.variant_id,eQTL_GTEx.qval) %>% unique() %>%
+  filter(!is.na(eQTL_Catalog.Gene.name) & !is.na(eQTL_GTEx.variant_id)) %>%
+  mutate(Type = "eQTL", Weight = eQTL_GTEx.qval,
+         from = eQTL_Catalog.Gene.name) %>%
+  rename(to = eQTL_GTEx.variant_id) %>% select(from, to, Type, Weight)
+
+gv.eqtl <- rbind(gv.eqtl.catalog,gv.eqtl.gtex )
+ 
+# 2. gene - variant (pQTL, qval)
+gv.pqtl1 <- gene.df7 %>% select(eQTL_Catalog.Gene.name,`pQTL.Disease/Phenotype`,`pQTL.q_pvalue`) %>% unique() %>%
+  filter(!is.na(eQTL_Catalog.Gene.name) & !is.na(`pQTL.Disease/Phenotype`)) %>%
+  mutate(Type = "pQTL", Weight = `pQTL.q_pvalue`,
+         from = eQTL_Catalog.Gene.name) %>%
+  rename(to = `pQTL.Disease/Phenotype`) %>% select(from, to, Type, Weight)
+
+gv.pqtl2 <- gene.df7 %>% select(eQTL_Catalog.Gene.name,`pQTL.rsID`,`pQTL.q_pvalue`) %>% unique() %>%
+  filter(!is.na(eQTL_Catalog.Gene.name) & !is.na(pQTL.rsID)) %>%
+  mutate(Type = "pQTL", Weight = `pQTL.q_pvalue`,
+         from = eQTL_Catalog.Gene.name) %>%
+  rename(to = pQTL.rsID) %>% select(from, to, Type, Weight)
+
+gv.pqtl <- rbind(gv.pqtl1, gv.pqtl2 )
+
+# 3. gene -drug (DGIdb)
+gd <- gene.df4 %>% select(DGI.gene_name, DGI.drug_name) %>% unique() %>% 
+  filter(!is.na(DGI.drug_name) & !is.na(DGI.gene_name)) %>% 
+  mutate(Type = "Gene-Drug", from = DGI.gene_name,Weight = 0) %>% 
+  rename(to = DGI.drug_name) %>% select(from, to, Type, Weight) 
+
+# 4. gene - gene (String)
+gg.string <- string %>% select(protein1, protein2, combined_score) %>% 
+  filter(protein1 ==gene) %>% 
+  filter(!grepl("^ESNG",protein2)) %>% 
+  mutate(protein2 = gsub("_HUMAN","",protein2), protein2 = toupper(protein2),
+         Type = "PPI",combined_score = combined_score/1000 ) %>% 
+  rename(from = protein1, to = protein2, Weight = combined_score) %>% select(from, to, Type, Weight) %>% unique()
+
+all <- rbind(gv.eqtl, gv.pqtl, gd,gg.string)
+unique(all$Type)
+
+write.table(all, gsub("txt","network.txt",output_file), quote = F,sep = "\t",row.names = F)
+
+```
+
