@@ -1,0 +1,4 @@
+VARIANT_CLASS	count	percent	label	color
+SNV	184	75.1	SNV (75.1%)	#4575b4
+DEL	42	17.1	DEL (17.1%)	#1a9850
+INS	19	7.8	INS (7.8%)	#fc8d59
