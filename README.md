@@ -1,4 +1,4 @@
-## VarXOmics is a free-access versatile web server for genomic data querying and variant analysis and prioritizing with multi-omics insights. 
+## VarXOmics is a free-access versatile web server for genomic data querying and (disease-causing) variant analysis and prioritizing with multi-omics insights. 
 
 ### Features:
 1. Available for both small variants and structural variants.
