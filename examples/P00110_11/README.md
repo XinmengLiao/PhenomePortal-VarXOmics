@@ -10,6 +10,7 @@ If any of the listed files can not be found
   - Variants consequence: `Figures_data/user_selected_VariantConsequence.txt` and figure `Figures/user_selected_VariantConsequence.pdf`
   - Variant SNP density: `Figures_data/user_selected_SNP_Density.txt` and figure `Figures/user_selected_SNP_density.jpg`
   - ClinVar Pathogenicity Distribution: `Figures_data/user_selected_ClinVarPathogenicity.txt` and figure `Figures/user_selected_ClinVarPathogenicity.pdf`
+  - ClinVar variants on all chromosomes: `Figures/ideogram.png`
 
 #### GO and KEGG: 
   - Gene-GO terms (need to split by BP, MF, CC types): `GO-All.txt`
@@ -35,3 +36,28 @@ If any of the listed files can not be found
   - PGx: `P00110_11.pgx_filtered.txt` and `P00110_11.pgx.txt`
 
 If user requires to run Exomiser original priortization, then also show another side bar of: **Exomiser PHENIX_PRIORITY** `P00110_11_Exomiser_PHENIX_PRIORITY.variants.tsv`
+
+ #### Interactive function
+ Users can selected their variants of interest, and all the sections only shows results of their selections. 
+ 1. Variant Summary section: the subset of users selection.
+ 2. Rerun script `Scripts/GO-KEGG-subset.R` and figures regenerated in:
+  - Gene-GO terms (need to split by BP, MF, CC types): `user_selected_GO-All.txt`
+  - GO terms count (need to split by BP, MF, CC types): `user_selected_GO-All-count.txt`
+  - GO Enrichment results (need to split by BP, MF, CC types): `user_selected_GO-All-Enrich.txt`
+  - GO BP enrichment figures: `Figures/user_selected_BPEnrich.png` and `Figures/user_selected_BPEnrichCircus.pdf`
+  - GO MF enrichment figures: `Figures/user_selected_MFEnrich.png` and `Figures/user_selected_MFEnrichCircus.pdf`
+  - GO CC enrichment figures: `Figures/user_selected_CCEnrich.png` and `Figures/user_selected_CCEnrichCircus.pdf`
+  - Gene-KEGG terms: `user_selected_KEGG-All.txt`
+  - KEGG terms count: `user_selected_KEGG-All-count.txt`
+  - KEGG Enrichment results: `user_selected_KEGG-All-Enrich.txt`
+  - KEGG enrichment figures: `Figures/user_selected_KEGGEnrich.png` and `Figures/user_selected_KEGGEnrichCircus.pdf`
+ 3. Rerun script `Scripts/GO-KEGG-subset.R` and figures are regenerated in:
+  - Variant accumulated Genes: `Figures_data/user_selected_GeneAccumultate-all.txt` and figure `Figures/user_selected_GeneAccumultate-AllorTop10.pdf`
+  - Variant accumulated ClinVar disease: `Figures_data/user_selected_ClinVarPathogenicity.txt` and figure `Figures/user_selected_ClinVarPathogenicity.pdf`
+  - Variants type: `Figures_data/user_selected_VariantClass.txt` and figure `Figures/user_selected_VariantClass.pdf`
+  - Variants consequence: `Figures_data/user_selected_VariantConsequence.txt` and figure `Figures/user_selected_VariantConsequence.pdf`
+  - Variant SNP density: `Figures_data/user_selected_SNP_Density.txt` and figure `Figures/user_selected_SNP_density.jpg`
+  - ClinVar Pathogenicity Distribution: `Figures_data/user_selected_ClinVarPathogenicity.txt` and figure `Figures/user_selected_ClinVarPathogenicity.pdf`
+  - ClinVar variants on all chromosomes: `Figures/ideogram.png`
+ 4. Network: the subset of users selection.
+ 5. GWAS, xQTL, and PGx: the subset of users selection.
