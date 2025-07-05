@@ -1,0 +1,4 @@
+ClinGen.Gene	ClinGen.Disease	ClinGen.Inheritance	ClinGen.MONDO	ClinGen.Classification
+APOB	familial hypobetalipoproteinemia 1	Semidominant	0014252	Definitive 
+APOB	hypercholesterolemia, autosomal dominant, type B	AD	0007751	Definitive 
+APOB	homozygous familial hypercholesterolemia		0018328	
