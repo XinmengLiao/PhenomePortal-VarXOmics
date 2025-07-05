@@ -4,16 +4,24 @@ If any of the listed files can not be found
 
 #### Variant Summary section:
   - Basic information: `P00110_11.priorisation.txt`
-  - Variant accumulated Genes: `` and the top 10 genes shown in figure ``
-  - Variant accumulated ClinVar disease: `` and the top 10 disease shown in figure ``
-  - Variants type: ``
-  - Variants consequence: ``
-  - Variant SNP density: `Marker_Density.SNP_density.jpg`
+  - Variant accumulated Genes: `Figures_data/user_selected_GeneAccumultate-all.txt` and figure `Figures/user_selected_GeneAccumultate-AllorTop10.pdf`
+  - Variant accumulated ClinVar disease: `Figures_data/user_selected_ClinVarPathogenicity.txt` and figure `Figures/user_selected_ClinVarPathogenicity.pdf`
+  - Variants type: `Figures_data/user_selected_VariantClass.txt` and figure `Figures/user_selected_VariantClass.pdf`
+  - Variants consequence: `Figures_data/user_selected_VariantConsequence.txt` and figure `Figures/user_selected_VariantConsequence.pdf`
+  - Variant SNP density: `Figures_data/user_selected_SNP_Density.txt` and figure `Figures/user_selected_SNP_density.jpg`
+  - ClinVar Pathogenicity Distribution: `Figures_data/user_selected_ClinVarPathogenicity.txt` and figure `Figures/user_selected_ClinVarPathogenicity.pdf`
 
 #### GO and KEGG: 
-  - GO Biological Pathways: `` and enrichment figure `user_selected_BPEnrich.png`, `user_selected_BPEnrichCircus.pdf`
-  - GO Molecular Functions: `` and enrichment figure ``
-  - GO Cellular Compounent: `` and enrichment figure ``
+  - Gene-GO terms (need to split by BP, MF, CC types): `GO-All.txt`
+  - GO terms count (need to split by BP, MF, CC types): `GO-All-count.txt`
+  - GO Enrichment results (need to split by BP, MF, CC types): `GO-All-Enrich.txt`
+  - GO BP enrichment figures: `Figures/BPEnrich-AllorTop10.png` and `Figures/BPEnrichCircus.pdf`
+  - GO MF enrichment figures: `Figures/MFEnrich-AllorTop10.png` and `Figures/MFEnrichCircus.pdf`
+  - GO CC enrichment figures: `Figures/CCEnrich-AllorTop10.png` and `Figures/CCEnrichCircus.pdf`
+  - Gene-KEGG terms: `KEGG-All.txt`
+  - KEGG terms count: `KEGG-All-count.txt`
+  - KEGG Enrichment results: `KEGG-All-Enrich.txt`
+  - KEGG enrichment figures: `Figures/KEGGEnrich-AllorTop10.png` and `Figures/KEGGEnrichCircus.pdf`
 
 #### Network:
   `P00110_11.network.txt`
