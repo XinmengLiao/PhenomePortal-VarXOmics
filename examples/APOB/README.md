@@ -1,6 +1,9 @@
 This is the showcase for single gene query (APOB). Only the files will used for webserver are listed here. Missing files means no data generated.
 
-Command for query: `sh Scripts/SingleGene.sh APOB [output-dir]`
+Command for query: 
+```
+sh Scripts/SingleGene.sh APOB [output-dir]
+```
 
 #### Basic information
   - ClinVar: `APOB-clinvar.txt`
