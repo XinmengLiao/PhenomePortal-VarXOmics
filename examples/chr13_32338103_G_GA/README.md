@@ -8,6 +8,8 @@ sh Scripts/SingleVariant.sh chr13_32338103_G_GA \
 	GRCH38 yes Female
 ```
 
+Input: `chr13_32338103_G_GA.vcf.gz`
+
 #### Basic information
   - Table: `chr13_32338103_G_GA.txt`
   - Lollipop: `Lollipop.html`
