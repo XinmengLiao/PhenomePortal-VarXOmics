@@ -11,6 +11,7 @@ Input: `P001_167.sv.vcf.gz`
 #### Variant Summary
  - Table: `P001_167.sv.annotated.vcf`
  - Circos figure: `P001_167_vcf2circos.html`
+ - Decipher 
 
 #### Exomiser Prioritization
  - `P001_167_Exomiser_PHENIX_PRIORITY.json`
