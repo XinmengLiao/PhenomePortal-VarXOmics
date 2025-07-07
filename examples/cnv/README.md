@@ -10,8 +10,9 @@ Input: `P001_167.cnv.vcf.gz`
 ### UI design
 
 #### Variant Summary 
-Table: `P001_167.cnv.annotated.vcf`
-Circos figure: `P001_167_vcf2circos.html`
+  - Table: `P001_167.cnv.annotated.vcf`
+  - Circos figure: `P001_167_vcf2circos.html`
+  - Decipher
 
 #### Exomiser Prioritization
 `P001_167_Exomiser_PHENIX_PRIORITY.json`
