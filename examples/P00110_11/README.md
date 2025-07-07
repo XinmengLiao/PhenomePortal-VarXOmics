@@ -41,7 +41,7 @@ config: `P00110_11_multivariant_config.yaml`
 
 #### Original Exomiser priortization 
 If user requires to run Exomiser original priortization, then also show another side bar of: \
-**Exomiser PHENIX_PRIORITY** `P00110_11_Exomiser_PHENIX_PRIORITY.variants.tsv`
+**Exomiser PHENIX_PRIORITY** `P00110_11_Exomiser_PHENIX_PRIORITY.json`
 
 
  #### Interactive function
