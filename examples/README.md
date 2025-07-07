@@ -45,14 +45,11 @@ The structure looks overall really nice. I hope some functions could be added.
    All these filterations will be passed to configuration files `Scripts/multivariant_config.yaml`
 
 5. Descriptions change to:
-    Multi-database variant annotation \
-    Multi-omics variant evidence \
-    Functional enrichment analysis \
-    Biological network analysis \
-    Variant evidence aggregated scoring \
-    Variant-Phenotype significance ranking \
-    Pharmacogenomic associations \
-    Custom selecting and data exporting \
+    - Comprehensive variant annotation: Variants with xxxx details. 
+    - Multi-omics insights: Easy searching of eQTL, pQTL, GWAS, MR, PGx information.
+    - Diverse functions: Quick searching of relevant functional pathways and interactions through biological network.
+    - Variant prioritizations: VarXOmics and Exomiser approaches for stratifying significant and disease-causing variants.
+    - Easy data output: Easy output Publication-ready figures and tabular analysed data for simplifying downstream anlaysis. 
 
 6. Add more options: \
    a) Reference genome version: GRCH37 or GRCH38 \
