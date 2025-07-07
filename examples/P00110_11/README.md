@@ -2,6 +2,10 @@ This is the showcase for multiple variant analysis, with breast cancer patient W
 Only the files will used for webserver are listed here. 
 If any of the listed files can not be found 
 
+Input files:
+vcf: `P00110_11.vcf.gz`
+config: `P00110_11_multivariant_config.yaml`
+
 #### Variant Summary section:
   - Basic information: `P00110_11.priorisation.txt`
   - Variant accumulated Genes: `Figures_data/user_selected_GeneAccumultate-all.txt` and figure `Figures/user_selected_GeneAccumultate-AllorTop10.pdf`
