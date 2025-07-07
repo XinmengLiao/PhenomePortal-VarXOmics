@@ -5,7 +5,7 @@ Command:
 bash VarXOmics_cnvsv.sh -v examples/cnv/P001_167.cnv.vcf.gz -o examples/cnv -i P001_167 -g GRCH38
 ```
 
-Input: P001_167.cnv.vcf.gz
+Input: `P001_167.sv.vcf.gz`
 
 ### UI design
 #### Variant Summary
