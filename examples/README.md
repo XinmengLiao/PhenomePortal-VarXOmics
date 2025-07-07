@@ -8,6 +8,9 @@ Here are the examples showcasing 4 functions of VarXOmics.
 
 ### UI design for the home page
 The structure looks overall really nice. I hope some functions could be added. 
+
+![ALT TEXT](https://github.com/XinmengLiao/APMI-VarXOmics/blob/main/images/FirstPage.png)
+
 1. Change the description to: 
 2. vcf file could only be vcf.gz file currently.
 3. More filter options could be added. These filterations will be applied only for multiple variant anlaysis. \
@@ -18,12 +21,12 @@ The structure looks overall really nice. I hope some functions could be added.
 
       **Allele Frequency (float)** \
       a) ClinVar variant: default display: 1 \
-      b) Predicted variant: default display: 0.05 \
+      b) Predicted variant: default display: 0.05 
       
       **Variant Deleteriouseness** \
       a) PolyPhen Score: default display: 0.05 \
       b) BayesDel Score (addAF): \
-      c) BayesDel Score (noAF): \
+      c) BayesDel Score (noAF): 
       
       **Missense Impact** \
       a) AlphaMissense Classification (multi-selection, 3 options): Likely pathogenic, Uncertain Significance, Likely benign \
@@ -31,13 +34,13 @@ The structure looks overall really nice. I hope some functions could be added.
       c) REVEL Score: default display: 0.5 \
       d) SIFT Score: default display: 0.05 \
       f) Ada Score: \
-      e) Rf score:  \
+      e) Rf score:  
       
       **Splicing Impact** \
       a) Acceptor Gain :default display: 0.8 \
       b) Acceptor Loss: default display: 0.8 \
       c) Donor Gain: default display: 0.8 \
-      d) Donor Loss: default display: 0.8 \
+      d) Donor Loss: default display: 0.8 
    
    All these filterations will be passed to configuration files `Scripts/multivariant_config.yaml`
 
@@ -51,7 +54,7 @@ The structure looks overall really nice. I hope some functions could be added.
     Pharmacogenomic associations \
     Custom selecting and data exporting \
 
-6. Add more options:
-   a) Reference genome version: GRCH37 or GRCH38
+6. Add more options: \
+   a) Reference genome version: GRCH37 or GRCH38 \
    b) 'PASS only' or not
    
