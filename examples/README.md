@@ -18,6 +18,7 @@ The structure looks overall really nice. I hope some functions could be added.
    **Clinical Pathogenicity (multi-Selections)** \
        a) ClinVar Pathogenicity (6 options): Pathogenic, Likely pathogenic, Uncertain Significance, Conflicting classifications, Benign, Likely benign \
        b) ACMG Predicted Classification (5 options):  Pathogenic, Likely pathogenic, Uncertain Significance, Benign, Likely benign
+       c) ACMG Pathogenicity: default display: 0.564
 
       **Allele Frequency (float)** \
       a) ClinVar variant: default display: 1 \
@@ -25,22 +26,21 @@ The structure looks overall really nice. I hope some functions could be added.
       
       **Variant Deleteriouseness** \
       a) PolyPhen Score: default display: 0.05 \
-      b) BayesDel Score (addAF): \
-      c) BayesDel Score (noAF): 
+      b) BayesDel Score (addAF): default display: 0.0692655 \
+      c) BayesDel Score (noAF): default display: -0.0570105
       
       **Missense Impact** \
       a) AlphaMissense Classification (multi-selection, 3 options): Likely pathogenic, Uncertain Significance, Likely benign \
-      b) AlphaMissense Score: default display: 0.564 \
-      c) REVEL Score: default display: 0.5 \
-      d) SIFT Score: default display: 0.05 \
-      f) Ada Score: \
-      e) Rf score:  
+      b) AlphaMissense Score: default display: default display: 0.564 \
+      c) REVEL Score: default display: default display: 0.75 \
+      d) Ada Score: default display: 0.6 \
+      e) Rf score: default display: 0.6
       
       **Splicing Impact** \
-      a) Acceptor Gain :default display: 0.8 \
-      b) Acceptor Loss: default display: 0.8 \
-      c) Donor Gain: default display: 0.8 \
-      d) Donor Loss: default display: 0.8 
+      a) Acceptor Gain :default display: 0.5 \
+      b) Acceptor Loss: default display: 0.5 \
+      c) Donor Gain: default display: 0.5 \
+      d) Donor Loss: default display: 0.5 
    
    All these filterations will be passed to configuration files `Scripts/multivariant_config.yaml`
 
@@ -57,4 +57,6 @@ The structure looks overall really nice. I hope some functions could be added.
 6. Add more options: \
    a) Reference genome version: GRCH37 or GRCH38 \
    b) 'PASS only' or not
+   c) Gender: Male, Female, Unknown
+   d) HPO IDs: (need to in format HP:xxxx) 
    
