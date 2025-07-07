@@ -39,10 +39,10 @@ config: `P00110_11_multivariant_config.yaml`
   - pQTL EpigraphDB: `P00110_11.pqtl_epigraphdb_filtered.txt`
   - PGx: `P00110_11.pgx_filtered.txt` and `P00110_11.pgx.txt`
 
-If user requires to run Exomiser original priortization, then also show another side bar of: **Exomiser PHENIX_PRIORITY** `P00110_11_Exomiser_PHENIX_PRIORITY.variants.tsv`
-
 #### Original Exomiser priortization 
-``
+If user requires to run Exomiser original priortization, then also show another side bar of: \
+**Exomiser PHENIX_PRIORITY** `P00110_11_Exomiser_PHENIX_PRIORITY.variants.tsv`
+
 
  #### Interactive function
  Users can selected their variants of interest, and all the sections only shows results of their selections. 
