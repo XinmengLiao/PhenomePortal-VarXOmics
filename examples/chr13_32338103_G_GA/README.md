@@ -14,6 +14,7 @@ Input: `chr13_32338103_G_GA.vcf.gz`
   - Table: `chr13_32338103_G_GA.txt`
   - Lollipop: `Lollipop.html`
   - AF world map: `AFMap.png`
+  - PubMed
 
 #### xQTL, GWAS, MR, and PGx
   - GWAS Catalog: `chr13_32338103_G_GA.gwas.txt`
