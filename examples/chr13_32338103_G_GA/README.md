@@ -46,8 +46,8 @@ mutated protein figure: `Lollipop.html`
  - gnomAD genome columns: gnomADg_AF, gnomADg_AFR_AF, gnomADg_AMI_AF, gnomADg_AMR_AF, gnomADg_ASJ_AF, gnomADg_EAS_AF, gnomADg_FIN_AF, gnomADg_MID_AF, gnomADg_NFE_AF, gnomADg_REMAINING_AF, gnomADg_SAS_AF
  - Map figure: `AFMap.png`
 
-examples:
-
+examples: \
+![ALT TEXT](https://github.com/XinmengLiao/APMI-VarXOmics/blob/main/images/SingleVariant-VariantSummary.png)
 
 #### xQTL, GWAS, MR, and PGx
 Just keep the current design of this page with different bar of **eqtl Catalog, eQTL GTEx, pqtl, GWAS, MR, PGx**.
