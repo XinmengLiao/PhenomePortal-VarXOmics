@@ -11,6 +11,7 @@ sh Scripts/SingleGene.sh APOB [output-dir]
   - GenCC: `APOB-gencc.txt`
   - ClinVar Lollipop: `ClinVarPLP-Lollipop-APOB.html`
   - Expression levels in tissues: use Link-out to GTEx and HPA
+  - PubMed
 
 #### Network
 `APOB-network.txt`
