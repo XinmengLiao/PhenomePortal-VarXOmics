@@ -10,8 +10,8 @@ Input: `P001_167.cnv.vcf.gz`
 ### UI design
 
 #### Variant Summary 
-  - Table: `P001_167.cnv.annotated.vcf`
-  - Circos figure: `P001_167_vcf2circos.html`
+  - Table: `P001_167.cnv.annotated.tsv`
+  - Circos figure: `P001_167.html`
   - Decipher
 
 #### Exomiser Prioritization
