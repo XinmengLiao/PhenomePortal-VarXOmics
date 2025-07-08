@@ -2,7 +2,7 @@ This is the showcase for single variant query. Only the files will used for webs
 
 Command for query: 
 ```
-sh Scripts/SingleVariant.sh chr13_32338103_G_GA \
+sh SingleVariant.sh chr13_32338103_G_GA \
 	/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz \
 	/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA \
 	GRCH38 yes Female
