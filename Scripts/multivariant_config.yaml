@@ -1,0 +1,26 @@
+input_vcf: 
+output_dir: 
+prioritised_file: 
+user_selected_variant: 
+user_selected_go_kegg_geneset:
+sampleID: 
+gender: 
+hpo:
+inheritance:
+genome: GRCh38
+only_pass: yes
+AF_CLINVAR: 1
+AF_PRECITION: 0.05
+ADA: 0.6
+RF: 0.6
+REVEL: 0.75
+SPLICEAI_AL: 0.5
+SPLICEAI_AG: 0.5
+SPLICEAI_DL: 0.5
+SPLICEAI_DG: 0.5
+BAYESDEL_ADDAF: 0.0692655
+BAYESDEL_NOAF: -0.0570105
+AM_CLASSIFICATION: likely_pathogenic,ambigous
+AM_PATHOGENICITY: 0.564
+CLINVAR: Pathogenic,Likely_pathogenic,Uncertain_significance,Conflicting_classifications_of_pathogenicity
+ACMG_CLASSIFICATION: Pathogenic,Likely_pathogenic,Uncertain_significance,Benign,Likely_benign

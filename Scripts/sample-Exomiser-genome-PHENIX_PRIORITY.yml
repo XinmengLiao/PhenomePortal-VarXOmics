@@ -1,0 +1,105 @@
+## Exomiser Analysis Template.
+# These are all the possible options for running exomiser. Use this as a template for
+# your own set-up.
+---
+analysis:
+    # hg19 or hg38 - ensure that the application has been configured to run the specified assembly otherwise it will halt.
+    genomeAssembly: hg38
+    vcf:
+    ped:
+    proband:
+    hpoIds: 
+    # These are the default settings, with values representing the maximum minor allele frequency in percent (%) permitted for an
+    # allele to be considered as a causative candidate under that mode of inheritance.
+    # If you just want to analyse a sample under a single inheritance mode, delete/comment-out the others. For AUTOSOMAL_RECESSIVE
+    # or X_RECESSIVE ensure *both* relevant HOM_ALT and COMP_HET modes are present.
+    # In cases where you do not want any cut-offs applied an empty map should be used e.g. inheritanceModes: {}
+    inheritanceModes: {
+      AUTOSOMAL_DOMINANT: 0.1,
+      AUTOSOMAL_RECESSIVE_HOM_ALT: 0.1,
+      AUTOSOMAL_RECESSIVE_COMP_HET: 2.0,
+      X_DOMINANT: 0.1,
+      X_RECESSIVE_HOM_ALT: 0.1,
+      X_RECESSIVE_COMP_HET: 2.0,
+      MITOCHONDRIAL: 0.2
+    }
+  #FULL or PASS_ONLY
+    analysisMode: PASS_ONLY
+    # Possible frequencySources:
+    # UK10K - http://www.uk10k.org/ (UK10K)
+    # gnomAD - http://gnomad.broadinstitute.org/ (GNOMAD_E, GNOMAD_G)
+    # note that as of gnomAD v2.1 1000 genomes, ExAC are part of gnomAD
+    # as of gnomAD v4 TOPMed & ESP are also included in gnomAD
+    frequencySources: [
+        UK10K,
+
+        GNOMAD_E_AFR,
+        GNOMAD_E_AMR,
+        GNOMAD_E_ASJ,
+        GNOMAD_E_EAS,
+        GNOMAD_E_FIN,
+        GNOMAD_E_NFE,
+        GNOMAD_E_OTH,
+        GNOMAD_E_SAS,
+
+        GNOMAD_G_AFR,
+        GNOMAD_G_AMR,
+        GNOMAD_G_ASJ,
+        GNOMAD_G_EAS,
+        GNOMAD_G_FIN,
+        GNOMAD_G_NFE,
+        GNOMAD_G_OTH,
+        GNOMAD_G_SAS
+    ]
+  # Possible pathogenicitySources: (POLYPHEN, MUTATION_TASTER, SIFT), (REVEL, MVP), CADD, REMM, SPLICE_AI, ALPHA_MISSENSE
+  # REMM is trained on non-coding regulatory regions
+  # *WARNING* if you enable CADD or REMM ensure that you have downloaded and installed the CADD/REMM tabix files
+  # and updated their location in the application.properties. Exomiser will not run without this.
+    pathogenicitySources: [ POLYPHEN, MUTATION_TASTER, SIFT ,REVEL, ALPHA_MISSENSE, SPLICE_AI, REMM, MVP]
+  # this is the recommended order for a genome-sized analysis.
+  # all steps are optional
+    steps: [
+        hiPhivePrioritiser: { },
+      #running the prioritiser followed by a priorityScoreFilter will remove genes
+      #which are least likely to contribute to the phenotype defined in hpoIds, this will
+      #dramatically reduce the time and memory required to analyse a genome.
+      # 0.501 is a good compromise to select good phenotype matches and the best protein-protein interactions hits from hiPhive
+        priorityScoreFilter: { priorityType: PHENIX_PRIORITY, minPriorityScore: 0.501 },
+        failedVariantFilter: { },
+      # geneBlacklistFilter: { },
+      #intervalFilter: {interval: 'chr10:123256200-123256300'},
+      # or for multiple intervals:
+      #intervalFilter: {intervals: ['chr10:123256200-123256300', 'chr10:123256290-123256350']},
+      # or using a BED file - NOTE this should be 0-based, Exomiser otherwise uses 1-based coordinates in line with VCF
+      #intervalFilter: {bed: /full/path/to/bed_file.bed},
+      #genePanelFilter: {geneSymbols: ['KIF1B','DHRS3','NBPF1','HSPG2','CRYBG2','SMPDL3B','GJB3','MMACHC','HOOK1','COL11A1','PTPN22','ANXA9','TUFT1','HRNR','FLG','SPRR2E','SPTA1','KCNJ9','PEX19','F5','QSOX1','HMCN1','LAMB3','PACC1','TATDN3','FLVCR1','RYR2','NLRP3','EIPR1','MCFD2','MSH2','PNO1','ANXA4','CHST10','GLI2','LOC124908048','NEB','TANC1','SCN9A','SCN7A','HOXD3','TTN','STAT1','CCDC150','PLEKHM3','CFAP65','SPEG','CHRNG','GAL3ST2','CAV3','NUP210','SLC25A38','VIPR1','SLC6A20','ALS2CL','KIF9','LAMB2','DNAH12','FLNB','CLDND1','ZPLD1','CCDC191','ZBTB20','GPR156','PCCB','CPA3','MUC4','LOC112268458','LOC124900647','CFAP99','HTT','SORCS2','SH3TC1','AMBN','STBD1','ARHGAP24','SLC9B1','EGF','MFSD8','FHIP1A','FNIP2','PALLD','TRIO','CARD6','ANKRD55','GFM2','VCAN','HSD17B4','MEGF10','LECT2','PURA','PCDHB3','DIAPH1','PDGFRB','SLU7','ATP10B','WRNIP1','NUP153','ALDH5A1','C6orf136','VARS2','MSH5','TNXB','HLA-DRB5','HLA-DRB1','COL11A2','ITPR3','SPDEF','COL12A1','LOC105377864','LAMA4','LAMA2','IL20RA','TNFAIP3','EPM2A','ARID1B','PRR18','TMEM184A','CRPPA','URGCP','LOC124901648','LOC124901651','AUTS2','NCF1','MTERF1','DYNC1I1','RASA4B','SLC26A4','CFTR','LEP','MRPS33','MGAM2','CLCN1','ARHGEF34P','OR4F21','CSMD1','MCPH1','LOC128966594','FAM90A19','CHMP7','KCNU1','FGFR1','PRKDC','TTPA','EYA1','ZBTB10','PDP1','POP1','CSMD3','TOP1MT','PLEC','WASHC1','VLDLR','BRD10','MPDZ','SLC24A2','MYORG','RMRP','ZBTB5','LOC107987067','SPATA31D1','INVS','FKTN','TMEM38B','SLC31A2','CDK5RAP2','CRAT','C9orf78','VAV2','NOTCH1','FBXW5','NDOR1','ANKRD30BP3','AGAP4','SHLD2P1','UNC5B','CDH23','ZMIZ1','PAPSS2','TM9SF3','ENTPD7','TWNK','POLL','CALHM2','INPP5F','TACC2','PTPRE','PAOX','ANO9','MUC6','MUC2','HTATIP2','MADD','OR8H3','ZDHHC5','GLYATL1','KLC2','BBS1','SPTBN2','CAPN5','MYO7A','MMP1','CEP164','MFRP','ROBO3','IQSEC3','VWF','PEX5','MUC19','MMP19','ERBB3','PAN2','MARS1','GRIP1','TMPO','WASHC4','LOC105370092','MUC8','GOLGA3','BRCA2','DHRS12','LOC124903229','MIR17HG','LOC105377805','TEP1','IPO4','FANCM','VCPKMT','GCH1','DACT1','ADAM21','ESRRB','CEP128','HHIPL1','TDRD9','AHNAK2','LOC105370714','LOC102724737','MAGEL2','GOLGA8R','OTUD7A','PLA2G4D','STARD9','DUOX2','WDR72','LCTL','LOC112268145','MAN2C1','HYKK','EFL1','GOLGA6L10','ALPK3','BLM','UNC45A','PGAP6','CAPN15','RPUSD1','TPSAB1','TPSD1','FLYWCH1','SLX4','MGRN1','LOC400499','SDR42E2','NPIPB13','ZNF48','TRIM72','ORC6','NOD2','MMP2','TRADD','CDH1','ZNF469','PIEZO1','MRM3','PITPNM3','COX10','MYO15A','LGALS9C','GRAP','KCNJ18','RSKR','FAM222B','SSH2','CRLF3','TBC1D3F','PIGW','ACACA','CALCOCO2','PDK2','LRRC37A3','ACOX1','ST6GALNAC1','LOC124904103','RNF213','CDH2','KLHL14','ATP5F1A','ATP8B1','NEDD4L','LMAN1','RTTN','IZUMO4','FBN3','CERS4','TYK2','ZNF44','PTGER1','SLC5A5','HAMP','CD177','CBLC','RASIP1','ZNF701','HSPA12B','SEC23B','ABHD12','MATN4','OCSTAMP','DIDO1','NRIP1','KCNE2','LOC102723769','LOC124905153','RIMBP3C','DDTL','CHEK2','PLA2G3','EFCAB6','ASMT','GYG2','ZNF41','SAGE1','PRRG3','OPN1LW']},
+      #qualityFilter: {minQuality: 50.0},
+      #variantEffectFilter: {remove: [SYNONYMOUS_VARIANT]},
+      #regulatoryFeatureFilter removes all non-regulatory non-coding variants over 20Kb from a known gene.
+        regulatoryFeatureFilter: { },
+      #knownVariantFilter: {}, #removes variants represented in the database
+        frequencyFilter: { maxFrequency: 2.0 },
+        pathogenicityFilter: { keepNonPathogenic: true },
+      #inheritanceFilter and omimPrioritiser should always run AFTER all other filters have completed
+      #they will analyse genes according to the specified modeOfInheritance above- UNDEFINED will not be analysed.
+        inheritanceFilter: { },
+      #omimPrioritiser isn't mandatory.
+        omimPrioritiser: {}
+        #Other prioritisers: Only combine omimPrioritiser with one of these.
+        #Don't include any if you only want to filter the variants.
+        #hiPhivePrioritiser: {},
+        # or run hiPhive in benchmarking mode: 
+        #hiPhivePrioritiser: {diseaseId: 'OMIM:101600', candidateGeneSymbol: FGFR2, runParams: 'human,mouse,fish,ppi'},
+        #phenixPrioritiser: {}
+        #exomeWalkerPrioritiser: {seedGeneIds: [11111, 22222, 33333]}
+    ]
+outputOptions:
+    outputContributingVariantsOnly: false
+    #numGenes options: 0 = all or specify a limit e.g. 500 for the first 500 results  
+    numGenes: 0
+    # Path to the desired output directory. Will default to the 'results' subdirectory of the exomiser install directory
+    #outputDirectory: results
+    # Filename for the output files. Will default to {input-vcf-filename}-exomiser
+    outputFileName: Pfeiffer-hiphive-genome-PASS_ONLY
+    #out-format options: HTML, JSON, TSV_GENE, TSV_VARIANT, VCF (default: HTML)
+    outputFormats: [HTML, JSON, TSV_GENE, TSV_VARIANT]
