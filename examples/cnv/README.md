@@ -11,7 +11,7 @@ Input: `P001_167.cnv.vcf.gz`
 
 #### Variant Summary 
   - Table: `P001_167.cnv.annotated.tsv`
-  - Circos figure: `P001_167.html`
+  - Circos figure: `P001_167_vcf2circos.html`
   - Decipher
 
 #### Exomiser Prioritization
