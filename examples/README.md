@@ -11,6 +11,7 @@ The structure looks overall really nice. I hope some functions could be added.
 
 ![ALT TEXT](https://github.com/XinmengLiao/APMI-VarXOmics/blob/main/images/FirstPage.png)
 
+0. change the background color to a lighter one since most of the figures have white background. 
 1. Change the description to: 
 2. vcf file could only be vcf.gz file currently.
 3. More filter options could be added. These filterations will be applied only for multiple variant anlaysis. \
