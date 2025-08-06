@@ -13,7 +13,7 @@ The structure looks overall really nice. I hope some functions could be added.
 
 0. change the background color to a lighter one since most of the figures have white background. 
 1. Change the description to: Advanced web server for genomic data querying and variant prioritizing with multi-omics insights.
-2. vcf file could only be vcf.gz file currently.
+2. vcf file could only be the compressed `vcf.gz` file currently.
 3. More filter options could be added. These filterations will be applied only for multiple variant anlaysis. \
 
    **Clinical Pathogenicity (multi-Selections)** \
