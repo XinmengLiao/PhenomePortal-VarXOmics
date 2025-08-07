@@ -1,4 +1,4 @@
-This is the showcase for single variant query. \
+This is the showcase for single variant query.
 
 Command for query: 
 ```
