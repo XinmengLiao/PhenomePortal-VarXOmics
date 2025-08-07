@@ -10,6 +10,8 @@ sh $varxomics/SingleGene.sh [Gene] [output-dir]
 sh $varxomics/SingleGene.sh APOB example/APOB
 ```
 
+All the following output files could be found in `/mnt/storage_pool/Genomics/VarXOmics/examples/APOB`
+
 #### Basic information
   - ClinVar: `APOB-clinvar.txt`
   - ClinGen:`APOB-clingen.txt`
