@@ -1,33 +1,45 @@
-This is the showcase for single variant query.
+This is the showcase for single variant query. \
 
 Command for query: 
 ```
-sh SingleVariant.sh chr13_32338103_G_GA \
-	/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz \
-	/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA \
-	GRCH38 yes Female
+varxomics='/mnt/storage_pool/Genomics/VarXOmics'
+bash $varxomics/SingleVariant.sh \
+	--id [FILENAME] \
+	-i [INPUT_VCF] \
+	-o [OUTPUT_DIR] \
+	--genome [GENOME] --only-pass [yes|no] --gender [Male|Female]
+
+# example
+bash $varxomics/SingleVariant.sh --id chr13_32338103_G_GA \
+	-i /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz \
+	-o /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA \
+	--genome GRCH38 --only-pass yes --gender Female
 ```
 
-Input: `chr13_32338103_G_GA.vcf.gz`
+Input: `/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz` \
+*Input must be in compressed **vcf.gz** format
+
+The following outputs could be found in: `/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA`
 
 #### Variant summary
   - Table: `chr13_32338103_G_GA.txt`
-  - Lollipop: `Lollipop.html`
+  - Lollipop: JSON file: `Lollipop.json` and HTML file: `Lollipop.html`
   - AF world map: `AFMap.png`
   - PubMed
 
 #### xQTL, GWAS, MR, and PGx
   - GWAS Catalog: `chr13_32338103_G_GA.gwas.txt`
+  - SNP MR EpigraphDB: `chr13_32338103_G_GA.snpmr.txt`
   - eqtl Catalog: `chr13_32338103_G_GA.eqtl_catalog.txt`
   - eQTL GTEx: `chr13_32338103_G_GA.eqtl_gtex.txt`
-  - pqtl EpigraphDB: `chr13_32338103_G_GA-pqtl_epigraphdb.txt`
+  - pqtl EpigraphDB: `chr13_32338103_G_GA.pqtl-epigraphdb.txt`
+  - pqtl Open Targets Genomics: `chr13_32338103_G_GA.pqtl_otg.txt`
   - PGx: `chr13_32338103_G_GA.pgx.txt`
-  - SNP MR EpigraphDB: `chr13_32338103_G_GA.snpmr.txt`
 
 
 ### UI design
-It's good to split the page into two side bars: variant summary and xQTL, GWAS, MR, and PGx. \
-In the Variant summary page, I hope more annotations can be splitted into different sections for more straightforward display. 
+It's good to split the page into two panels: **variant summary** and **xQTL, GWAS, MR, and PGx**. \
+In the Variant summary page, I hope annotations can be splitted into different sections for more straightforward display as following: 
 
 #### Basic Information
 columns: HGVSc, HGVSp, VARIANT_CLASS, Consequence, IMPACT, EXON, ClinVar_CLNSIG, acmg_classification, Existing_variation, MAX_AF, MAX_AF_POPS
@@ -51,4 +63,4 @@ examples: \
 ![ALT TEXT](https://github.com/XinmengLiao/APMI-VarXOmics/blob/main/images/SingleVariant-VariantSummary.png)
 
 #### xQTL, GWAS, MR, and PGx
-Just keep the current design of this page with different bar of **eqtl Catalog, eQTL GTEx, pqtl, GWAS, MR, PGx**.
+Just keep the current design of this page with different side bars and show the tables of **eqtl Catalog, eQTL GTEx, pqtl, GWAS, MR, PGx**.
