@@ -1,4 +1,4 @@
-This is the showcase for single variant query. Only the files will used for webserver are listed here. Missing files means no data generated.
+This is the showcase for single variant query.
 
 Command for query: 
 ```
