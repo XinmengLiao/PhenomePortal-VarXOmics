@@ -1,10 +1,19 @@
-This is the showcase for multiple variant analysis, with breast cancer patient WGS data. 
-Only the files will used for webserver are listed here. 
-If any of the listed files can not be found 
+This is the showcase for multiple variant analysis, with breast cancer patient WGS data.
 
 Input files:
 vcf: `P00110_11.vcf.gz` \
-config: `P00110_11_multivariant_config.yaml`
+
+Command for analysis
+```bash
+varxomics='/mnt/storage_pool/Genomics/VarXOmics'
+bash VarXOmics_snv.sh \
+  -i test \
+  -o $varxomics/examples/test \
+  -v $varxomics/examples/test/test.vcf.gz \
+  --genome GRCH38 --only-pass yes \
+  --gender Female --inheritance AD \
+  --hpo HP:0003002,HP:0006625
+```
 
 #### Variant Summary section:
   - Basic information: `P00110_11.priorisation.txt`
