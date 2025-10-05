@@ -5,7 +5,7 @@ Command for query:
 varxomics='/mnt/storage_pool/Genomics/VarXOmics'
 bash $varxomics/SingleVariant.sh \
 	--id [FILENAME] \
-	-i [INPUT_VCF] \
+	-i [INPUT_TEXT] \
 	-o [OUTPUT_DIR] \
 	--genome [GENOME] --only-pass [yes|no] --gender [Male|Female]
 
@@ -17,7 +17,8 @@ bash $varxomics/SingleVariant.sh --id chr13_32338103_G_GA \
 ```
 
 Input: `/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz` \
-*Input must be in compressed **vcf.gz** format
+* Users input the text in **"CHR_POS_REF_ALT"** format.
+* The text will be converted into VCF format in the first step. 
 
 The following outputs could be found in: `/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA`
 
