@@ -11,7 +11,7 @@ bash $varxomics/SingleVariant.sh \
 
 # example
 bash $varxomics/SingleVariant.sh --id chr13_32338103_G_GA \
-	-i /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz \
+	-i /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.txt \
 	-o /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA \
 	--genome GRCH38 --gender Female
 ```
