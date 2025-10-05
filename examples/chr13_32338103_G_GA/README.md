@@ -13,7 +13,7 @@ bash $varxomics/SingleVariant.sh \
 bash $varxomics/SingleVariant.sh --id chr13_32338103_G_GA \
 	-i /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz \
 	-o /mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA \
-	--genome GRCH38 --only-pass yes --gender Female
+	--genome GRCH38 --gender Female
 ```
 
 Input: `/mnt/storage_pool/Genomics/VarXOmics/examples/chr13_32338103_G_GA/chr13_32338103_G_GA.vcf.gz` \
