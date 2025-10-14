@@ -25,7 +25,7 @@ bash VarXOmics_snv.sh \
   - ClinVar Pathogenicity Distribution: `Figures_data/user_selected_ClinVarPathogenicity.txt` and figure `Figures/user_selected_ClinVarPathogenicity.pdf`
   - ClinVar variants on all chromosomes: `Figures/ideogram.png`
 
-#### GO and KEGG: 
+#### GO and KEGG: (skip all figures for the current version)
   - Gene-GO terms (need to split by BP, MF, CC types): `GO-All.txt`
   - GO terms count (need to split by BP, MF, CC types): `GO-All-count.txt`
   - GO Enrichment results (need to split by BP, MF, CC types): `GO-All-Enrich.txt`
