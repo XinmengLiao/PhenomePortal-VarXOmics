@@ -37,7 +37,6 @@ The following outputs could be found in: `/mnt/storage_pool/Genomics/VarXOmics/e
   - pqtl Open Targets Genomics: `chr13_32338103_G_GA.pqtl_otg.txt`
   - PGx: `chr13_32338103_G_GA.pgx.txt`
 
-
 ### UI design
 It's good to split the page into two panels: **variant summary** and **xQTL, GWAS, MR, and PGx**. \
 In the Variant summary page, I hope annotations can be splitted into different sections for more straightforward display as following: 
@@ -67,3 +66,8 @@ mutated protein figure: `Lollipop.html`
 
 #### xQTL, GWAS, MR, and PGx
 Just keep the current design of this page with different side bars and show the tables of **eqtl Catalog, eQTL GTEx, pqtl, GWAS, MR, PGx**.
+
+
+### Changing logs
+2025-10-14
+Remove the '--gender parameter' in the python, R, and bash scripts, since gender is not used in the file 
