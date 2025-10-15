@@ -5,7 +5,7 @@ vcf: `P00110_11.vcf.gz` \
 
 Command for analysis
 ```bash
-varxomics='/mnt/storage_pool/Genomics/VarXOmics'
+varxomics='/mnt/nas/Genomics/VarXOmics'
 bash VarXOmics_snv.sh \
   -i test \
   -o $varxomics/examples/test \
