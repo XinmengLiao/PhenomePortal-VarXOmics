@@ -28,13 +28,13 @@ bash VarXOmics_snv.sh \
 #### GO and KEGG: (skip all figures for the current version)
   - Gene-GO terms (need to split by BP, MF, CC types): `GO-All.txt`
   - GO terms count (need to split by BP, MF, CC types): `GO-All-count.txt`
-  - GO Enrichment results (need to split by BP, MF, CC types): `GO-All-Enrich.txt`
+  - **GO Enrichment results** (need to split by BP, MF, CC types): `GO-All-Enrich.txt`
   - GO BP enrichment figures: `Figures/BPEnrich-AllorTop10.png` and `Figures/BPEnrichCircus.pdf`
   - GO MF enrichment figures: `Figures/MFEnrich-AllorTop10.png` and `Figures/MFEnrichCircus.pdf`
   - GO CC enrichment figures: `Figures/CCEnrich-AllorTop10.png` and `Figures/CCEnrichCircus.pdf`
   - Gene-KEGG terms: `KEGG-All.txt`
   - KEGG terms count: `KEGG-All-count.txt`
-  - KEGG Enrichment results: `KEGG-All-Enrich.txt`
+  - **KEGG Enrichment results:** `KEGG-All-Enrich.txt`
   - KEGG enrichment figures: `Figures/KEGGEnrich-AllorTop10.png` and `Figures/KEGGEnrichCircus.pdf`
 
 #### Network:
