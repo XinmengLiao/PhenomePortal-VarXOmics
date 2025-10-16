@@ -1,6 +1,11 @@
 These are the files would be used in constructing the webpage for CNV and SV. (Actually CNVs and SVs commands and results are same)
 
 ## Single CNV/SV query
+Input format:
+**chr_start_end_SVtype** \
+For CNV, example input is: `chr10_17268558_17274050_DEL.txt` \
+For SV, example input is: `chr11_65736013_65736014_INS.txt`
+
 Command:
 ```
 varxomics="/mnt/nas/Genomics/VarXOmics"
