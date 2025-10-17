@@ -1,4 +1,4 @@
-**NewGenome** is a versitile web server for genomic data querying and variants analysis and priortisation. The data sources are integrated from diverse open-source databases, including multi-omics informations (eQTL, pQTL, GWAS, Traits), pharmacogenomics infomration, protein-protein interactions, gene-drug interactions. The detailed data could be accessed as described followed:
+**VarXOmics** is a versitile web server for genomic data querying and variants analysis and priortisation. The data sources are integrated from diverse open-source databases, including multi-omics informations (eQTL, pQTL, GWAS, Traits), pharmacogenomics infomration, protein-protein interactions, gene-drug interactions. The detailed data could be accessed as described followed:
 
 
 ### Multi-Omics insights
