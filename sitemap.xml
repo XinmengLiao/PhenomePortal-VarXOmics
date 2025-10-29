@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
+         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Data%20Access/</loc>
+         <lastmod>2025-10-29</lastmod>
+    </url>
+    <url>
          <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Intro/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
          <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNVs%20and%20SVs%20intrepretation/</loc>
-         <lastmod>2025-10-29</lastmod>
-    </url>
-    <url>
-         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Data%20Access/</loc>
          <lastmod>2025-10-29</lastmod>
     </url>
     <url>
