@@ -23,7 +23,7 @@ theme:
 
 nav:
   - Home: README.md
-  - Functions:
+  - Tutorials:
       - Variant Query: Functions/Variant Query.md
       - Small Variant Interpretation: Functions/Small variant interpretation.md
       - Gene Query: Functions/Gene Query.md
