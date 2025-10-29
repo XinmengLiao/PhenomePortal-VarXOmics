@@ -1,0 +1,47 @@
+site_name: VarXOmics Documentation
+site_url: https://xinmengliao.github.io/PhenomePortal-VarXOmics/
+repo_url: https://github.com/XinmengLiao/PhenomePortal-VarXOmics
+repo_name: XinmengLiao/PhenomePortal-VarXOmics
+site_author: Xinmeng Liao
+copyright: "© 2025 VarXOmics Team"
+
+theme:
+  name: material
+  logo: images/logo.png
+  favicon: images/favicon.png
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: blue
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - toc.integrate
+    - content.code.copy
+
+# ✅ no need for docs_dir — MkDocs uses 'docs/' by default
+
+nav:
+  - Home: README.md
+  - Tutorials:
+      - Variant Query: Tutorials/Variant Query.md
+      - Small Variant Interpretation: Tutorials/Small variant interpretation.md
+      - Gene Query: Tutorials/Gene Query.md
+      - CNVs and SVs Interpretation: Tutorials/CNVs and SVs intrepretation.md
+      - Data Access: Tutorials/Data Access.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - fenced_code
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - footnotes
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      fallback_to_build_date: true
