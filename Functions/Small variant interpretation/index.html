@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20variant%20interpretation/">
       
       
+        <link rel="prev" href="../Variant%20Query/">
+      
+      
+        <link rel="next" href="../Gene%20Query/">
       
       
       <link rel="icon" href="../../images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Small variant interpretation - VarXOmics Documentation</title>
+        <title>Small Variant Interpretation - VarXOmics Documentation</title>
       
     
     
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Small variant interpretation
+              Small Variant Interpretation
             
           </span>
         </div>
@@ -219,11 +223,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Tutorials/Variant Query.md" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Variant%20Query/" class="md-tabs__link">
           
   
   
@@ -307,26 +313,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -339,7 +350,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -353,7 +364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Variant Query.md" class="md-nav__link">
+      <a href="../Variant%20Query/" class="md-nav__link">
         
   
   
@@ -373,10 +384,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Tutorials/Small variant interpretation.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Small Variant Interpretation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -387,6 +418,240 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-variant-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Multi-Variant Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Multi-Variant Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Input Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-variant-filtering-settings" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Variant Filtering Settings
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧩 Sample Filters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allele-frequency-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Allele Frequency Filters
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#predictive-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      🤖 Predictive Scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#spliceai-thresholds" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 SpliceAI Thresholds
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayesdel-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧮 BayesDel Scores
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#classification-filters" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Classification Filters
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🧾 Classification Filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alphamissense-am-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      AlphaMissense (AM) Classification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alphamissense-am-pathogenicity" class="md-nav__link">
+    <span class="md-ellipsis">
+      AlphaMissense (AM) Pathogenicity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clinvar-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClinVar Status
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acmg-classification" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACMG Classification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-run-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Run Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-result-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Result Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Result Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variant-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Variant Overview
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variant-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 Variant Summary
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enrichment-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔬 Enrichment Analysis
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gwas-qtl-associations" class="md-nav__link">
+    <span class="md-ellipsis">
+      📚 GWAS &amp; QTL Associations
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#network" class="md-nav__link">
+    <span class="md-ellipsis">
+      🕸️ Network
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exomiser" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧠 Exomiser
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-export-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Export results
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -399,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Gene Query.md" class="md-nav__link">
+      <a href="../Gene%20Query/" class="md-nav__link">
         
   
   
@@ -422,7 +687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/CNVs and SVs intrepretation.md" class="md-nav__link">
+      <a href="../CNVs%20and%20SVs%20intrepretation/" class="md-nav__link">
         
   
   
@@ -445,7 +710,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Data Access.md" class="md-nav__link">
+      <a href="../Data Access.md" class="md-nav__link">
         
   
   
@@ -487,7 +752,7 @@
   
 
 
-  <h1>Small variant interpretation</h1>
+  <h1>Small Variant Interpretation</h1>
 
 <h2 id="multi-variant-analysis">🔹 Multi-Variant Analysis<a class="headerlink" href="#multi-variant-analysis" title="Permanent link">&para;</a></h2>
 <p>VarXOmics supports <strong>multi-variant analysis</strong> for <strong>small variants (SNPs &amp; INDELs)</strong>, <strong>copy number variants (CNVs)</strong>, and <strong>structural variants (SVs)</strong>.<br />

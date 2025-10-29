@@ -13,6 +13,8 @@
         <link rel="canonical" href="https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNVs%20and%20SVs%20intrepretation/">
       
       
+        <link rel="prev" href="../Gene%20Query/">
+      
       
       
       <link rel="icon" href="../../images/favicon.png">
@@ -20,7 +22,7 @@
     
     
       
-        <title>CNVs and SVs intrepretation - VarXOmics Documentation</title>
+        <title>CNVs and SVs Interpretation - VarXOmics Documentation</title>
       
     
     
@@ -105,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CNVs and SVs intrepretation
+              CNVs and SVs Interpretation
             
           </span>
         </div>
@@ -219,11 +221,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Tutorials/Variant Query.md" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../Variant%20Query/" class="md-tabs__link">
           
   
   
@@ -307,26 +311,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -339,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -353,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Variant Query.md" class="md-nav__link">
+      <a href="../Variant%20Query/" class="md-nav__link">
         
   
   
@@ -376,7 +385,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Small variant interpretation.md" class="md-nav__link">
+      <a href="../Small%20variant%20interpretation/" class="md-nav__link">
         
   
   
@@ -399,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Gene Query.md" class="md-nav__link">
+      <a href="../Gene%20Query/" class="md-nav__link">
         
   
   
@@ -419,10 +428,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Tutorials/CNVs and SVs intrepretation.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    CNVs and SVs Interpretation
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -433,6 +462,90 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#multi-svcnv-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Multi SV/CNV Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Multi SV/CNV Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Input Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-results-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Results Overview
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Results Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#annotated-tsv-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧾 Annotated TSV Table
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#circos-visualization" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Circos Visualization
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-export" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Export
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -445,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Data Access.md" class="md-nav__link">
+      <a href="../Data Access.md" class="md-nav__link">
         
   
   
@@ -487,7 +600,7 @@
   
 
 
-  <h1>CNVs and SVs intrepretation</h1>
+  <h1>CNVs and SVs Interpretation</h1>
 
 <h2 id="multi-svcnv-analysis">🔹 Multi SV/CNV Analysis<a class="headerlink" href="#multi-svcnv-analysis" title="Permanent link">&para;</a></h2>
 <p>VarXOmics supports <strong>multi-sample CNV (Copy Number Variant)</strong> and <strong>SV (Structural Variant)</strong> analysis.  </p>

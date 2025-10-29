@@ -14,13 +14,15 @@
       
       
       
+        <link rel="next" href="../Small%20variant%20interpretation/">
+      
       
       <link rel="icon" href="../../images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>VarXOmics Variant Query Guide - VarXOmics Documentation</title>
+        <title>Variant Query - VarXOmics Documentation</title>
       
     
     
@@ -105,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              VarXOmics Variant Query Guide
+              Variant Query
             
           </span>
         </div>
@@ -219,11 +221,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../Tutorials/Variant Query.md" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
   
@@ -307,26 +311,31 @@
       
   
   
+    
   
   
+  
     
     
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -339,7 +348,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Tutorials
@@ -350,10 +359,32 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../Tutorials/Variant Query.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Variant Query
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -364,6 +395,170 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#small-variant-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 Small Variant Query
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 Small Variant Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-variant" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Input Variant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-select-reference-genome" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Select Reference Genome
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-view-results" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. View Results
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. View Results">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variant-annotation" class="md-nav__link">
+    <span class="md-ellipsis">
+      🧬 Variant Annotation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#clinvar-lollipop" class="md-nav__link">
+    <span class="md-ellipsis">
+      🍭 ClinVar Lollipop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gwas-qtls" class="md-nav__link">
+    <span class="md-ellipsis">
+      📊 GWAS &amp; QTLs
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-allele-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌍 Global Allele Frequency
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-export-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Export Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cnv-sv-query" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔹 CNV &amp; SV Query
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔹 CNV &amp; SV Query">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-input-variant_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Input Variant
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-select-reference-genome-and-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Select Reference Genome and Type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-view-results_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. View Results
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-export-data_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Export Data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -376,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Small variant interpretation.md" class="md-nav__link">
+      <a href="../Small%20variant%20interpretation/" class="md-nav__link">
         
   
   
@@ -399,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Gene Query.md" class="md-nav__link">
+      <a href="../Gene%20Query/" class="md-nav__link">
         
   
   
@@ -422,7 +617,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/CNVs and SVs intrepretation.md" class="md-nav__link">
+      <a href="../CNVs%20and%20SVs%20intrepretation/" class="md-nav__link">
         
   
   
@@ -445,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tutorials/Data Access.md" class="md-nav__link">
+      <a href="../Data Access.md" class="md-nav__link">
         
   
   
