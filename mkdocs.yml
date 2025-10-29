@@ -23,12 +23,12 @@ theme:
 
 nav:
   - Home: README.md
-  - Tutorials:
-      - Variant Query: Tutorials/Variant Query.md
-      - Small Variant Interpretation: Tutorials/Small variant interpretation.md
-      - Gene Query: Tutorials/Gene Query.md
-      - CNVs and SVs Interpretation: Tutorials/CNVs and SVs intrepretation.md
-      - Data Access: Tutorials/Data Access.md
+  - Functions:
+      - Variant Query: Functions/Variant Query.md
+      - Small Variant Interpretation: Functions/Small variant interpretation.md
+      - Gene Query: Functions/Gene Query.md
+      - CNVs and SVs Interpretation: Functions/CNVs and SVs intrepretation.md
+      - Data Access: Functions/Data Access.md
 
 markdown_extensions:
   - toc:
