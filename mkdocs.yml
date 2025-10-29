@@ -29,6 +29,8 @@ nav:
       - Gene Query: Functions/Gene Query.md
       - CNVs and SVs Interpretation: Functions/CNVs and SVs intrepretation.md
       - Data Access: Functions/Data Access.md
+   - Data Access: Functions/Data Access.md
+     
 
 markdown_extensions:
   - toc:
