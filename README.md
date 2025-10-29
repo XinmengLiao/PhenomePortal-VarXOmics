@@ -1,5 +1,5 @@
 ## 🧬 VarXOmics  
-### A free-access, versatile web platform for genomic data querying and variant prioritization with multi-omics insights  
+### A free-access, versatile web platform for genomic data querying, analyzing, and variant prioritization with multi-omics insights  
 
 📍 **Access VarXOmics:** [https://www.phenomeportal.org/varxomics](https://www.phenomeportal.org/varxomics)  
 
@@ -41,3 +41,5 @@ Each module of VarXOmics is documented with step-by-step Markdown guides:
 | **Multi-Variant Analysis** | Upload and filter VCF files for cohort-wide analysis. | [View Tutorial ›](https://github.com/XinmengLiao/PhenomePortal-VarXOmics/blob/main/Tutorials/Small%20variant%20interpretation.md) |
 | **Multi SV/CNV Analysis** | Visualize and interpret multi-sample CNV/SV datasets. | [View Tutorial ›](https://github.com/XinmengLiao/PhenomePortal-VarXOmics/blob/main/Tutorials/CNVs%20and%20SVs%20intrepretation.md) |
 
+### 📂 Data Access: 
+[Data Access Documentation ›](https://github.com/XinmengLiao/PhenomePortal-VarXOmics/tree/main/Data%20Access)
