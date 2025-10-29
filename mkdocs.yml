@@ -7,7 +7,7 @@ copyright: "© 2025 VarXOmics Team"
 
 theme:
   name: material
-  logo: images/logo.png
+  logo: images/white-logo.png
   favicon: images/favicon.png
   palette:
     - scheme: default
