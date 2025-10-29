@@ -1,7 +1,7 @@
 ## 🧬 VarXOmics  
 ### A free-access, versatile web platform for genomic data querying and variant prioritization with multi-omics insights  
 
-📍 **Access VarXOmics:** [https://varxomics.org](https://www.phenomeportal.org/varxomics)  
+📍 **Access VarXOmics:** [https://www.phenomeportal.org/varxomics](https://www.phenomeportal.org/varxomics)  
 
 <br>
 
