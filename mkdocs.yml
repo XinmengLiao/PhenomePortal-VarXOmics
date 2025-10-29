@@ -22,7 +22,7 @@ theme:
 # ✅ no need for docs_dir — MkDocs uses 'docs/' by default
 
 nav:
-  - Home: README.md
+  - Home: Intro.md
   - Tutorials:
       - Variant Query: Functions/Variant Query.md
       - Small Variant Interpretation: Functions/Small variant interpretation.md
