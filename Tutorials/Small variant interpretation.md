@@ -204,7 +204,7 @@ Users can combine interaction filters and weight thresholds to create **focused 
 
 #### 🧠 Exomiser
 
-VarXOmics integrates **Exomiser**(https://exomiser.readthedocs.io/en/stable/#) analysis to support phenotype-driven variant prioritization. By linking variant annotations with **HPO terms**, Exomiser scores potential candidate variants and genes according to their phenotypic relevance.
+VarXOmics integrates [**Exomiser**](https://exomiser.readthedocs.io/en/stable/#) analysis to support phenotype-driven variant prioritization. By linking variant annotations with **HPO terms**, Exomiser scores potential candidate variants and genes according to their phenotypic relevance.
 
 This section presents:  
 - Ranked list of candidate genes and variants associated with input HPO phenotypes.  
