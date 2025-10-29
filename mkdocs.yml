@@ -28,8 +28,7 @@ nav:
       - Small Variant Interpretation: Functions/Small variant interpretation.md
       - Gene Query: Functions/Gene Query.md
       - CNVs and SVs Interpretation: Functions/CNVs and SVs intrepretation.md
-      - Data Access: Functions/Data Access.md
-   - Data Access: Functions/Data Access.md
+  - Data Access: Data Access.md
      
 
 markdown_extensions:
