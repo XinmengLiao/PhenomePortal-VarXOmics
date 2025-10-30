@@ -10,13 +10,13 @@
         <meta name="author" content="Xinmeng Liao">
       
       
-        <link rel="canonical" href="https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Variant%20Query/">
+        <link rel="canonical" href="https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNV%20and%20SV%20Query/">
       
       
-        <link rel="prev" href="../../Intro/">
+        <link rel="prev" href="../Small%20Variant%20Query/">
       
       
-        <link rel="next" href="../Small%20variant%20interpretation/">
+        <link rel="next" href="../Small%20Variant%20Interpretation/">
       
       
       <link rel="icon" href="../../images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Variant Query - VarXOmics Documentation</title>
+        <title>Structural Variant Query - VarXOmics Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#varxomics-variant-query-guide" class="md-skip">
+        <a href="#cnv-sv-query" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Variant Query
+              Structural Variant Query
             
           </span>
         </div>
@@ -229,7 +229,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="./" class="md-tabs__link">
+        <a href="../Small%20Variant%20Query/" class="md-tabs__link">
           
   
   
@@ -380,6 +380,29 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Small%20Variant%20Query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Small Variant Query
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -389,15 +412,13 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   
   <span class="md-ellipsis">
-    Variant Query
+    Structural Variant Query
     
   </span>
   
@@ -410,7 +431,7 @@
   
   
   <span class="md-ellipsis">
-    Variant Query
+    Structural Variant Query
     
   </span>
   
@@ -423,107 +444,12 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#small-variant-query" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔹 Small Variant Query
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="🔹 Small Variant Query">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1-input-variant" class="md-nav__link">
-    <span class="md-ellipsis">
-      1. Input Variant
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#2-select-reference-genome" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. Select Reference Genome
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-view-results" class="md-nav__link">
-    <span class="md-ellipsis">
-      3. View Results
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="3. View Results">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#variant-annotation" class="md-nav__link">
-    <span class="md-ellipsis">
-      🧬 Variant Annotation
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#clinvar-lollipop" class="md-nav__link">
-    <span class="md-ellipsis">
-      🍭 ClinVar Lollipop
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gwas-qtls" class="md-nav__link">
-    <span class="md-ellipsis">
-      📊 GWAS &amp; QTLs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#global-allele-frequency" class="md-nav__link">
-    <span class="md-ellipsis">
-      🌍 Global Allele Frequency
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-export-data" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Export Data
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#cnv-sv-query" class="md-nav__link">
@@ -536,7 +462,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1-input-variant_1" class="md-nav__link">
+  <a href="#1-input-variant" class="md-nav__link">
     <span class="md-ellipsis">
       1. Input Variant
     </span>
@@ -554,7 +480,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-view-results_1" class="md-nav__link">
+  <a href="#3-view-results" class="md-nav__link">
     <span class="md-ellipsis">
       3. View Results
     </span>
@@ -563,7 +489,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-export-data_1" class="md-nav__link">
+  <a href="#4-export-data" class="md-nav__link">
     <span class="md-ellipsis">
       4. Export Data
     </span>
@@ -592,7 +518,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Small%20variant%20interpretation/" class="md-nav__link">
+      <a href="../Small%20Variant%20Interpretation/" class="md-nav__link">
         
   
   
@@ -702,81 +628,38 @@
   
 
 
-<h1 id="varxomics-variant-query-guide">VarXOmics Variant Query Guide<a class="headerlink" href="#varxomics-variant-query-guide" title="Permanent link">&para;</a></h1>
-<p>VarXOmics supports querying <strong>small variants (SNPs &amp; INDELs)</strong>, <strong>copy number variants (CNVs)</strong>, and <strong>structural variants (SVs)</strong>. Both <strong>GRCh37</strong> and <strong>GRCh38</strong> reference genomes are supported.</p>
-<h2 id="small-variant-query">🔹 Small Variant Query<a class="headerlink" href="#small-variant-query" title="Permanent link">&para;</a></h2>
+  <h1>Structural Variant Query</h1>
+
+<h2 id="cnv-sv-query">🔹 CNV &amp; SV Query<a class="headerlink" href="#cnv-sv-query" title="Permanent link">&para;</a></h2>
 <h3 id="1-input-variant">1. Input Variant<a class="headerlink" href="#1-input-variant" title="Permanent link">&para;</a></h3>
 <ul>
-<li>From the <strong>Home</strong> page, choose <strong>“Single Variant”</strong>.  </li>
-<li>Enter the variant location using the format:  <code>chromosome_position_reference allele_alternative allele</code> \
-    Example: <code>chr1_123456_A_T</code>  </li>
-<li>Click <strong>Run</strong> to proceed.</li>
-</ul>
-<h3 id="2-select-reference-genome">2. Select Reference Genome<a class="headerlink" href="#2-select-reference-genome" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Choose the reference genome: <strong>GRCh37</strong> or <strong>GRCh38</strong>.  </li>
-<li>Click <strong>Start Analysis</strong> to begin.  <blockquote>
-<p><strong>Note:</strong> Variants aligned with <strong>GRCh37</strong> will be <strong>lifted over to GRCh38</strong> before VEP (v114) annotation.</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="3-view-results">3. View Results<a class="headerlink" href="#3-view-results" title="Permanent link">&para;</a></h3>
-<p>Results will appear automatically once the data is loaded. Annotations are organized into four sections:</p>
-<h4 id="variant-annotation">🧬 Variant Annotation<a class="headerlink" href="#variant-annotation" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Contents includes:</li>
-<li>Transcript and protein alterations  </li>
-<li><strong>ClinVar</strong> information  </li>
-<li><strong>Global allele frequencies</strong> (gnomAD, 1000 Genomes Project)  </li>
-<li><strong>In silico</strong> prediction scores  </li>
-<li>Users could customize displayed columns using the <strong>“Columns”</strong> button.</li>
-</ul>
-<h4 id="clinvar-lollipop">🍭 ClinVar Lollipop<a class="headerlink" href="#clinvar-lollipop" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Visualizes <strong>protein alterations</strong> as a lollipop plot.  </li>
-<li>Supports <strong>zooming</strong> and <strong>export</strong> in <strong>PNG</strong> or <strong>PDF</strong> format.</li>
-</ul>
-<h4 id="gwas-qtls">📊 GWAS &amp; QTLs<a class="headerlink" href="#gwas-qtls" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Displays variant-associated data in structured tables:</li>
-<li><strong>GWAS</strong></li>
-<li><strong>eQTLs</strong></li>
-<li><strong>pQTLs</strong></li>
-<li><strong>Pharmacogenomics (PGx)</strong></li>
-</ul>
-<h4 id="global-allele-frequency">🌍 Global Allele Frequency<a class="headerlink" href="#global-allele-frequency" title="Permanent link">&para;</a></h4>
-<ul>
-<li>Shows the <strong>maximum global minor allele frequency (MAF)</strong> on a <strong>world map</strong>, illustrating population-specific frequency distributions.</li>
-</ul>
-<h3 id="4-export-data">4. Export Data<a class="headerlink" href="#4-export-data" title="Permanent link">&para;</a></h3>
-<ul>
-<li>Download <strong>all results</strong> (tables and figures) as a <strong>compressed file</strong> via the <strong>“Export All”</strong> button (top-right corner).</li>
-</ul>
-<h2 id="cnv-sv-query">🔹 CNV &amp; SV Query<a class="headerlink" href="#cnv-sv-query" title="Permanent link">&para;</a></h2>
-<h3 id="1-input-variant_1">1. Input Variant<a class="headerlink" href="#1-input-variant_1" title="Permanent link">&para;</a></h3>
-<ul>
 <li>From the <strong>Home</strong> page, choose <strong>“Single CNV/SV”</strong>.  </li>
-<li>Enter the variant in the format: <code>chromosome_starting position_ending position_mutation type</code></li>
+<li>Enter the variant in the format: <code>chromosome_starting position_ending position_mutation type</code>
+  Example: <code>chr3_100000_200000_dup</code>  </li>
+<li>Click <strong>Run</strong> to proceed.  </li>
 </ul>
-<p>Example: <code>chr3_100000_200000_dup</code><br />
-- Click <strong>Run</strong> to proceed.</p>
+<p><img width="60%" src="https://github.com/user-attachments/assets/bbd74e94-502e-4ae4-908f-3364e0103a66" /></p>
+<p><br></p>
 <h3 id="2-select-reference-genome-and-type">2. Select Reference Genome and Type<a class="headerlink" href="#2-select-reference-genome-and-type" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Reference genome options: <strong>GRCh37</strong>, <strong>GRCh38</strong>  </li>
 <li>Mutation type options: <strong>CNV</strong>, <strong>SV</strong>  </li>
 <li>Click <strong>Start Analysis</strong> to begin.  <blockquote>
-<p><strong>Note:</strong> CNVs and SVs are annotated using <strong>AnnotSV</strong>.</p>
+<p><strong>Note:</strong> CNVs and SVs are annotated using <strong>AnnotSV</strong>.  </p>
 </blockquote>
 </li>
 </ul>
-<h3 id="3-view-results_1">3. View Results<a class="headerlink" href="#3-view-results_1" title="Permanent link">&para;</a></h3>
+<p><img width="65%" src="https://github.com/user-attachments/assets/c2cbda85-2c06-48d9-8e68-109e58665289" /></p>
+<p><br></p>
+<h3 id="3-view-results">3. View Results<a class="headerlink" href="#3-view-results" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Annotated results appear once loaded.  </li>
 <li>Customize displayed columns using the <strong>“Columns”</strong> button.</li>
 </ul>
-<h3 id="4-export-data_1">4. Export Data<a class="headerlink" href="#4-export-data_1" title="Permanent link">&para;</a></h3>
+<h3 id="4-export-data">4. Export Data<a class="headerlink" href="#4-export-data" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Export all annotation tables as a <strong>compressed file</strong> via the <strong>“Export All”</strong> button.</li>
+<li>Export all annotation tables as a <strong>compressed file</strong> via the <strong>“Export All”</strong> button.
+<img width="1089" height="213" alt="image" src="https://github.com/user-attachments/assets/1e9f08cc-5c5e-4438-b7f9-9351f57d3549" /></li>
 </ul>
 
 
@@ -798,7 +681,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 29, 2025 22:44:53 UTC">October 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 30, 2025 11:41:49 UTC">October 30, 2025</span>
   </span>
 
     

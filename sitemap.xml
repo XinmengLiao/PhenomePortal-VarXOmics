@@ -2,26 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Data%20Access/</loc>
-         <lastmod>2025-10-29</lastmod>
+         <lastmod>2025-10-30</lastmod>
     </url>
     <url>
          <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Intro/</loc>
-         <lastmod>2025-10-29</lastmod>
+         <lastmod>2025-10-30</lastmod>
+    </url>
+    <url>
+         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNV%20and%20SV%20Query/</loc>
+         <lastmod>2025-10-30</lastmod>
     </url>
     <url>
          <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNVs%20and%20SVs%20intrepretation/</loc>
-         <lastmod>2025-10-29</lastmod>
+         <lastmod>2025-10-30</lastmod>
     </url>
     <url>
          <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Gene%20Query/</loc>
-         <lastmod>2025-10-29</lastmod>
+         <lastmod>2025-10-30</lastmod>
     </url>
     <url>
-         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20variant%20interpretation/</loc>
-         <lastmod>2025-10-29</lastmod>
+         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20Variant%20Interpretation/</loc>
+         <lastmod>2025-10-30</lastmod>
     </url>
     <url>
-         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Variant%20Query/</loc>
-         <lastmod>2025-10-29</lastmod>
+         <loc>https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20Variant%20Query/</loc>
+         <lastmod>2025-10-30</lastmod>
     </url>
 </urlset>

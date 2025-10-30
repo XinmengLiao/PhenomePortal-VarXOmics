@@ -10,10 +10,10 @@
         <meta name="author" content="Xinmeng Liao">
       
       
-        <link rel="canonical" href="https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20variant%20interpretation/">
+        <link rel="canonical" href="https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20Variant%20Interpretation/">
       
       
-        <link rel="prev" href="../Variant%20Query/">
+        <link rel="prev" href="../CNV%20and%20SV%20Query/">
       
       
         <link rel="next" href="../Gene%20Query/">
@@ -229,7 +229,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../Variant%20Query/" class="md-tabs__link">
+        <a href="../Small%20Variant%20Query/" class="md-tabs__link">
           
   
   
@@ -383,12 +383,35 @@
   
   
     <li class="md-nav__item">
-      <a href="../Variant%20Query/" class="md-nav__link">
+      <a href="../Small%20Variant%20Query/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Variant Query
+    Small Variant Query
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CNV%20and%20SV%20Query/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Structural Variant Query
     
   </span>
   
@@ -781,6 +804,7 @@ This module allows users to upload VCF files, configure advanced filtering param
 <li>Drop and upload a <strong>VCF file</strong>.  </li>
 <li>Click <strong>Run</strong> to proceed to the variant filtering configuration window.</li>
 </ul>
+<p><img width="60%" src="https://github.com/user-attachments/assets/9c37f2db-ab7e-4c04-951d-db788373fcef" /></p>
 <h3 id="2-variant-filtering-settings">2. Variant Filtering Settings<a class="headerlink" href="#2-variant-filtering-settings" title="Permanent link">&para;</a></h3>
 <p>After uploading the VCF, a configuration panel titled <strong>“Multi-Variant Analysis Settings”</strong> will appear.<br />
 This panel allows fine-tuning of variant filtration and prioritization parameters.</p>
@@ -961,7 +985,8 @@ This panel allows fine-tuning of variant filtration and prioritization parameter
   - <strong>Variant Types</strong><br />
   - <strong>Clinical Pathogenicity</strong><br />
   - <strong>Affected Genes</strong></p>
-<p>These visual overviews allow users to rapidly assess the biological and clinical relevance of the prioritized variants.</p>
+<p>These visual overviews allow users to rapidly assess the biological and clinical relevance of the prioritized variants.  </p>
+<p><img width="90%" src="https://github.com/user-attachments/assets/0e3f9b39-147b-4f3f-901b-56a42b6fe1ff" /></p>
 <hr />
 <h4 id="variant-summary">📊 Variant Summary<a class="headerlink" href="#variant-summary" title="Permanent link">&para;</a></h4>
 <p>This section provides an integrated summary of all filtered variants through seven visual plots, allowing users to explore the overall variant landscape.</p>
@@ -996,6 +1021,7 @@ This panel allows fine-tuning of variant filtration and prioritization parameter
 - <strong>KEGG Enrichment Visualization:</strong><br />
   Presents top pathways ranked by enrichment significance.</p>
 <p>The enrichment section provides direct insight into the biological themes underlying the filtered variant set.</p>
+<p><img width="100%" src="https://github.com/user-attachments/assets/6971a902-0810-4f0d-8c8b-0dc60ae77bfc" /></p>
 <hr />
 <h4 id="gwas-qtl-associations">📚 GWAS &amp; QTL Associations<a class="headerlink" href="#gwas-qtl-associations" title="Permanent link">&para;</a></h4>
 <p>This section presents variant- and gene-level associations collected from multiple public resources, allowing users to explore known evidence linking the queried variants or genes to complex traits, diseases, and regulatory effects.<br />
@@ -1044,15 +1070,17 @@ This network provides an integrated, evidence-weighted visualization of how vari
 <li><strong>Table View:</strong><br />
   Click the <strong>table icon</strong> in the bottom-right corner to open a structured view of the network, allowing users to inspect and filter interaction data directly.</li>
 </ul>
-<hr />
 <p>✅ <strong>Tip:</strong><br />
 Users can combine interaction filters and weight thresholds to create <strong>focused sub-networks</strong>, such as <em>gene–drug pharmacogenomic networks</em> or <em>variant–phenotype associations</em> for specific pathways.</p>
+<p><img width="100%" src="https://github.com/user-attachments/assets/fd1a0e3d-1ad4-4de6-93fb-b363d3b144d0" /></p>
+<hr />
 <h4 id="exomiser">🧠 Exomiser<a class="headerlink" href="#exomiser" title="Permanent link">&para;</a></h4>
 <p>VarXOmics integrates <a href="https://exomiser.readthedocs.io/en/stable/#"><strong>Exomiser</strong></a> analysis to support phenotype-driven variant prioritization. By linking variant annotations with <strong>HPO terms</strong>, Exomiser scores potential candidate variants and genes according to their phenotypic relevance.</p>
 <p>This section presents:<br />
 - Ranked list of candidate genes and variants associated with input HPO phenotypes.<br />
 - Exomiser scores indicating phenotype similarity and variant pathogenicity.<br />
 - Cross-references with ClinVar and other annotations for interpretation consistency.</p>
+<p><img width="100%" src="https://github.com/user-attachments/assets/df783ae6-6132-4637-997d-2036a552fe3c" /></p>
 <hr />
 <h3 id="5-export-results">5. Export results<a class="headerlink" href="#5-export-results" title="Permanent link">&para;</a></h3>
 <p>Users can export all results, figures, and enrichment tables as a single compressed archive by clicking <strong>“Export All”</strong> in the top-right corner of the interface.</p>
@@ -1076,7 +1104,7 @@ Users can combine interaction filters and weight thresholds to create <strong>fo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 29, 2025 22:44:53 UTC">October 29, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="October 30, 2025 12:22:15 UTC">October 30, 2025</span>
   </span>
 
     
