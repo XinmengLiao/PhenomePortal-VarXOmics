@@ -1,0 +1,413 @@
+EpiGraphDB-expID	EpiGraphDB-outID	EpiGraphDB-outID_mrbase	EpiGraphDB-nsnp	EpiGraphDB-method	EpiGraphDB-beta	EpiGraphDB-se	EpiGraphDB-pvalue	EpiGraphDB-rsID
+CCL27	Serum creatinine (eGFRcrea)	1105	1	Wald ratio	-0.013084112	0.004672897	0.005110261	rs2070074
+CCL27	Cough on most days	UKB-a:258	1	Wald ratio	0.155086851	0.056066974	0.005673116	rs2070074
+CCL27	Diagnoses - main ICD10: R10 Abdominal and pelvic pain	UKB-a:582	1	Wald ratio	0.145722521	0.053429038	0.006383502	rs2070074
+CCL27	Non-cancer illness code  self-reported: sleep apnoea	UKB-a:69	1	Wald ratio	0.414548477	0.156528942	0.008087801	rs2070074
+CCL27	Non-cancer illness code  self-reported: hypertension	UKB-a:61	1	Wald ratio	0.050824966	0.020680555	0.01398607	rs2070074
+CCL27	Non-cancer illness code  self-reported: enlarged prostate	UKB-a:95	1	Wald ratio	0.216170293	0.088688898	0.014793317	rs2070074
+CCL27	Body fat	999	1	Wald ratio	-0.069158879	0.028660436	0.015819932	rs2070074
+CCL27	Alcohol intake frequency	UKB-a:25	1	Wald ratio	-0.045261371	0.018857757	0.016388532	rs2070074
+CCL27	Birth weight	1084	1	Wald ratio	0.046728972	0.019937695	0.019090963	rs2070074
+CCL27	Depressive symptoms	1000	1	Wald ratio	-0.043613707	0.018691589	0.019630657	rs2070074
+CCL27	Systemic lupus erythematosus	815	1	Wald ratio	-0.5989118	0.259567303	0.021035492	rs2070074
+CCL27	Non-cancer illness code  self-reported: hypothyroidism or myxoedema	UKB-a:77	1	Wald ratio	0.114991033	0.050690923	0.023300342	rs2070074
+CCL27	Non-cancer illness code  self-reported: diverticular disease or diverticulitis	UKB-a:102	1	Wald ratio	0.220923091	0.097788871	0.023871917	rs2070074
+CCL27	Large vessel disease	1110	1	Wald ratio	-0.404049844	0.181308411	0.025845704	rs2070074
+CCL27	Diagnoses - main ICD10: K35 Acute appendicitis	UKB-a:548	1	Wald ratio	0.30019614	0.138892246	0.030667544	rs2070074
+CCL27	Urinary albumin-to-creatinine ratio	1107	1	Wald ratio	0.07165109	0.034267913	0.036536214	rs2070074
+CCL27	Non-cancer illness code  self-reported: migraine	UKB-a:78	1	Wald ratio	-0.179952781	0.089120191	0.043464931	rs2070074
+CCL27	Small vessel disease	1111	1	Wald ratio	0.3894081	0.193146417	0.043786485	rs2070074
+CCL27	Non-cancer illness code  self-reported: pernicious anaemia	UKB-a:90	1	Wald ratio	0.34600708	0.172362764	0.044703343	rs2070074
+CCL27	Non-cancer illness code  self-reported: anxiety or panic attacks	UKB-a:82	1	Wald ratio	-0.309245518	0.154155492	0.044849603	rs2070074
+CCL27	Fractured bone site(s): Other bones	UKB-a:441	1	Wald ratio	-0.122226362	0.063012872	0.052415591	rs2070074
+CCL27	Hippocampus volume	1045	1	Wald ratio	-50.10373832	26.2165109	0.055985045	rs2070074
+CCL27	Fasting glucose	773	1	Wald ratio	0.031152648	0.016510903	0.059188247	rs2070074
+CCL27	Lung cancer	966	1	Wald ratio	-0.182980446	0.097856698	0.061500251	rs2070074
+CCL27	Knee osteoarthritis	1171	1	Wald ratio	0.259755791	0.146468083	0.076151944	rs2070074
+CCL27	Mean cell haemoglobin concentration	272	1	Wald ratio	0.034579439	0.019626168	0.07808539	rs2070074
+CCL27	Age at menopause	1004	1	Wald ratio	0.218068536	0.124610592	0.080118314	rs2070074
+CCL27	Fractured or broken bones in last 5 years	UKB-a:308	1	Wald ratio	-0.074966302	0.042986195	0.081165675	rs2070074
+CCL27	Body mass index (BMI)	UKB-a:248	1	Wald ratio	0.022167352	0.012750935	0.08212479	rs2070074
+CCL27	Packed cell volume	274	1	Wald ratio	-0.165109034	0.096573209	0.087325541	rs2070074
+CCL27	Vascular or heart problems diagnosed by doctor: Angina	UKB-a:436	1	Wald ratio	0.110032752	0.064373066	0.087395767	rs2070074
+CCL27	Pancreatic cancer	822	1	Wald ratio	-0.424269017	0.251185903	0.091207204	rs2070074
+CCL27	Diagnoses - main ICD10: D25 Leiomyoma of uterus	UKB-a:522	1	Wald ratio	-0.247078033	0.148043345	0.095125828	rs2070074
+CCL27	Clear cell ovarian cancer	1124	1	Wald ratio	-0.349221184	0.21046729	0.097062236	rs2070074
+CCL27	Microalbuminuria	1097	1	Wald ratio	0.190031153	0.115264798	0.099219636	rs2070074
+CCL27	Non-cancer illness code  self-reported: asthma	UKB-a:66	1	Wald ratio	0.055640109	0.033843226	0.100164939	rs2070074
+CCL27	Non-cancer illness code  self-reported: psoriasis	UKB-a:100	1	Wald ratio	0.167472008	0.102877425	0.103550527	rs2070074
+CCL27	Knee and hip osteoarthritis	1170	1	Wald ratio	0.192758267	0.118580646	0.10404632	rs2070074
+CCL27	HOMA-B	770	1	Wald ratio	-0.027725857	0.017133956	0.10562342	rs2070074
+CCL27	Diagnoses - main ICD10: H25 Senile cataract	UKB-a:529	1	Wald ratio	0.19207799	0.122193721	0.115970558	rs2070074
+CCL27	Diagnoses - main ICD10: S66 Injury of muscle and tendon at wrist and hand level	UKB-a:591	1	Wald ratio	0.366094526	0.23695385	0.122345418	rs2070074
+CCL27	Serum cystatin C (eGFRcys)	1106	1	Wald ratio	-0.015264798	0.009968847	0.125707618	rs2070074
+CCL27	Forced expiratory volume in 1-second (FEV1)	UKB-a:337	1	Wald ratio	-0.016752991	0.011044143	0.129288969	rs2070074
+CCL27	Lung adenocarcinoma	965	1	Wald ratio	-0.227705253	0.151685358	0.133312034	rs2070074
+CCL27	Diagnoses - main ICD10: K80 Cholelithiasis	UKB-a:559	1	Wald ratio	0.116390112	0.079659245	0.143988038	rs2070074
+CCL27	Non-cancer illness code  self-reported: chronic obstructive airways disease or copd	UKB-a:67	1	Wald ratio	0.253922148	0.176067758	0.149250401	rs2070074
+CCL27	Chronic kidney disease	1102	1	Wald ratio	0.115264798	0.080996885	0.154713857	rs2070074
+CCL27	Pallidum volume	1046	1	Wald ratio	15.46978193	10.89221184	0.155531757	rs2070074
+CCL27	Forced vital capacity (FVC)	UKB-a:336	1	Wald ratio	-0.014670561	0.010471402	0.161210454	rs2070074
+CCL27	Childhood intelligence	16	1	Wald ratio	-0.095950156	0.068847352	0.163418742	rs2070074
+CCL27	HbA1C	758	1	Wald ratio	-0.025856698	0.018691589	0.166562682	rs2070074
+CCL27	Eye problems or disorders: Injury or trauma resulting in loss of vision	UKB-a:425	1	Wald ratio	-0.351194227	0.256267613	0.170555876	rs2070074
+CCL27	Eye problems or disorders: Diabetes related eye disease	UKB-a:423	1	Wald ratio	-0.331513077	0.244992558	0.176005893	rs2070074
+CCL27	Non-cancer illness code self-reported: pulmonary embolism (with or without) dvt	UKB-a:64	1	Wald ratio	-0.254331986	0.19067747	0.18225845	rs2070074
+CCL27	ER-positive Breast cancer (Combined Oncoarray; iCOGS; GWAS meta analysis)	1127	1	Wald ratio	-0.052959502	0.039875389	0.184136816	rs2070074
+CCL27	Non-cancer illness code  self-reported: high cholesterol	UKB-a:108	1	Wald ratio	0.043241958	0.033084295	0.19120467	rs2070074
+CCL27	Height	89	1	Wald ratio	0.020249221	0.015576324	0.193600969	rs2070074
+CCL27	Diagnoses - main ICD10: M17 Gonarthrosis [arthrosis of knee]	UKB-a:563	1	Wald ratio	0.107313553	0.083205655	0.197141397	rs2070074
+CCL27	Schizophrenia	22	1	Wald ratio	-0.074752665	0.058255452	0.199426407	rs2070074
+CCL27	Red blood cell count	275	1	Wald ratio	-0.01588785	0.012461059	0.202309242	rs2070074
+CCL27	Breast cancer (Combined Oncoarray; iCOGS; GWAS meta analysis)	1126	1	Wald ratio	-0.041744548	0.033333333	0.210447293	rs2070074
+CCL27	Paget's disease	975	1	Wald ratio	0.387510903	0.311187227	0.213033954	rs2070074
+CCL27	Systolic blood pressure  automated reading	UKB-a:360	1	Wald ratio	0.016118193	0.013067477	0.217404665	rs2070074
+CCL27	Squamous cell lung cancer	967	1	Wald ratio	-0.184310874	0.150476636	0.220632826	rs2070074
+CCL27	Cancer code  self-reported: malignant melanoma	UKB-a:58	1	Wald ratio	-0.233444338	0.191075476	0.22180639	rs2070074
+CCL27	Non-cancer illness code  self-reported: muscle or soft tissue injuries	UKB-a:96	1	Wald ratio	-0.226550148	0.198227219	0.253087948	rs2070074
+CCL27	Mean cell haemoglobin	271	1	Wald ratio	0.066043614	0.057943925	0.254375907	rs2070074
+CCL27	Weight	UKB-a:249	1	Wald ratio	0.012833364	0.011262586	0.254507693	rs2070074
+CCL27	Glioma	1013	1	Wald ratio	0.267608813	0.235866235	0.25655187	rs2070074
+CCL27	HDL cholesterol	299	1	Wald ratio	-0.02834891	0.025233645	0.261243542	rs2070074
+CCL27	ER-negative Breast cancer (Combined Oncoarray; iCOGS; GWAS meta analysis)	1128	1	Wald ratio	-0.067912773	0.060747664	0.263588896	rs2070074
+CCL27	Diagnoses - main ICD10: R35 Polyuria	UKB-a:586	1	Wald ratio	-0.375484708	0.339692735	0.269001147	rs2070074
+CCL27	Intracranial volume	1041	1	Wald ratio	11627.78816	10609.76528	0.2731	rs2070074
+CCL27	Diagnoses - main ICD10: R04 Haemorrhage from respiratory passages	UKB-a:580	1	Wald ratio	-0.262298285	0.248119242	0.290444923	rs2070074
+CCL27	Non-cancer illness code  self-reported: hyperthyroidism or thyrotoxicosis	UKB-a:76	1	Wald ratio	0.138540359	0.131793753	0.293171044	rs2070074
+CCL27	Age at menarche	1095	1	Wald ratio	0.031152648	0.03005755	0.3	rs2070074
+CCL27	IgA nephropathy	1081	1	Wald ratio	-0.446735202	0.436092835	0.305644539	rs2070074
+CCL27	Diagnoses - main ICD10: R11 Nausea and vomiting	UKB-a:583	1	Wald ratio	-0.318971528	0.313329726	0.308675125	rs2070074
+CCL27	Cancer code  self-reported: prostate cancer	UKB-a:57	1	Wald ratio	-0.18216202	0.186917863	0.329780298	rs2070074
+CCL27	Nucleus accumbens volume	1042	1	Wald ratio	5.99470405	6.151713396	0.329819686	rs2070074
+CCL27	Diagnoses - main ICD10: N92 Excessive  frequent and irregular menstruation	UKB-a:578	1	Wald ratio	-0.09645764	0.099012753	0.329960174	rs2070074
+CCL27	Urate	1055	1	Wald ratio	0.027102804	0.028660436	0.344326024	rs2070074
+CCL27	Thyroid cancer	1082	1	Wald ratio	0.397172961	0.425545171	0.350650961	rs2070074
+CCL27	Mean cell volume	273	1	Wald ratio	-0.134579439	0.147352025	0.361074667	rs2070074
+CCL27	Happiness	UKB-a:367	1	Wald ratio	-0.014490125	0.015922648	0.362805454	rs2070074
+CCL27	Non-cancer illness code  self-reported: vaginal prolapse or uterine prolapse	UKB-a:92	1	Wald ratio	-0.201167953	0.22478844	0.370829185	rs2070074
+CCL27	Mean platelet volume	1006	1	Wald ratio	-0.00529595	0.005919003	0.370927779	rs2070074
+CCL27	Neo-conscientiousness	114	1	Wald ratio	-0.355140187	0.4	0.374621192	rs2070074
+CCL27	Diagnoses - main ICD10: M72 Fibroblastic disorders	UKB-a:572	1	Wald ratio	0.134584564	0.156295268	0.389187519	rs2070074
+CCL27	Amyotrophic lateral sclerosis	1086	1	Wald ratio	0.080373832	0.09376947	0.391365938	rs2070074
+CCL27	Transferrin Saturation	1051	1	Wald ratio	0.046105919	0.054205607	0.395005641	rs2070074
+CCL27	Total cholesterol	301	1	Wald ratio	-0.022429907	0.026791277	0.40247493	rs2070074
+CCL27	Birth length	29	1	Wald ratio	-0.042990654	0.051401869	0.402950363	rs2070074
+CCL27	Neuroticism	1007	1	Wald ratio	-0.015576324	0.018691589	0.404656762	rs2070074
+CCL27	Diagnoses - main ICD10: R07 Pain in throat and chest	UKB-a:581	1	Wald ratio	0.045362703	0.054565156	0.405776337	rs2070074
+CCL27	Diagnoses - main ICD10: M23 Internal derangement of knee	UKB-a:566	1	Wald ratio	0.067039437	0.080860179	0.407059981	rs2070074
+CCL27	Hearing difficulty or problems: Yes	UKB-a:257	1	Wald ratio	0.017915467	0.021636451	0.407657805	rs2070074
+CCL27	Fasting insulin	775	1	Wald ratio	-0.013395639	0.016510903	0.417181494	rs2070074
+CCL27	Diagnoses - main ICD10: I48 Atrial fibrillation and flutter	UKB-a:536	1	Wald ratio	0.088460087	0.112259628	0.430699311	rs2070074
+CCL27	Transferrin	1052	1	Wald ratio	-0.043613707	0.05576324	0.434142347	rs2070074
+CCL27	Diagnoses - main ICD10: N20 Calculus of kidney and ureter	UKB-a:574	1	Wald ratio	0.108385825	0.139547698	0.437339477	rs2070074
+CCL27	Non-cancer illness code  self-reported: joint disorder	UKB-a:86	1	Wald ratio	0.130119879	0.169368136	0.442328822	rs2070074
+CCL27	Diagnoses - main ICD10: C50 Malignant neoplasm of breast	UKB-a:519	1	Wald ratio	0.070741832	0.093896603	0.451208742	rs2070074
+CCL27	Heel bone mineral density (BMD) T-score  automated	UKB-a:500	1	Wald ratio	-0.012341589	0.016507944	0.454692331	rs2070074
+CCL27	Iron	1049	1	Wald ratio	0.039252336	0.054205607	0.46898106	rs2070074
+CCL27	Diagnoses - main ICD10: J33 Nasal polyp	UKB-a:541	1	Wald ratio	-0.169684172	0.23459144	0.469484641	rs2070074
+CCL27	Fracture resulting from simple fall	UKB-a:332	1	Wald ratio	0.023346991	0.032600083	0.473890373	rs2070074
+CCL27	Non-cancer illness code  self-reported: kidney stone or ureter stone or bladder stone	UKB-a:72	1	Wald ratio	0.093337038	0.134179519	0.486671131	rs2070074
+CCL27	Cancer code  self-reported: basal cell carcinoma	UKB-a:59	1	Wald ratio	-0.102687487	0.151786984	0.498708227	rs2070074
+CCL27	Diagnoses - main ICD10: I83 Varicose veins of lower extremities	UKB-a:538	1	Wald ratio	-0.061673971	0.095790332	0.519677003	rs2070074
+CCL27	Eye problems or disorders: Cataract	UKB-a:426	1	Wald ratio	-0.046848325	0.073713135	0.525070277	rs2070074
+CCL27	Fractured bone site(s): Arm	UKB-a:440	1	Wald ratio	-0.091173054	0.144301782	0.527503136	rs2070074
+CCL27	Non-cancer illness code  self-reported: depression	UKB-a:81	1	Wald ratio	-0.033967043	0.05458566	0.533764055	rs2070074
+CCL27	High grade serous ovarian cancer	1121	1	Wald ratio	0.05271028	0.084984424	0.535103342	rs2070074
+CCL27	Neo-extraversion	115	1	Wald ratio	-0.251090343	0.414018692	0.544202013	rs2070074
+CCL27	Cigarettes smoked per day	961	1	Wald ratio	0.258255452	0.429595016	0.54773325	rs2070074
+CCL27	Non-cancer illness code  self-reported: deep venous thrombosis (dvt)	UKB-a:65	1	Wald ratio	-0.055358552	0.096668168	0.566871013	rs2070074
+CCL27	Thalamus volume	1048	1	Wald ratio	-19.47538941	34.88753894	0.576685018	rs2070074
+CCL27	Amygdala volume	1043	1	Wald ratio	7.219626168	13.06510903	0.580545367	rs2070074
+CCL27	Primary sclerosing cholangitis 	1112	1	Wald ratio	-0.086028558	0.15576324	0.580740542	rs2070074
+CCL27	Diagnoses - main ICD10: N40 Hyperplasia of prostate	UKB-a:576	1	Wald ratio	0.069464537	0.126302378	0.582328987	rs2070074
+CCL27	Diagnoses - main ICD10: D12 Benign neoplasm of colon  rectum  anus and anal canal	UKB-a:521	1	Wald ratio	-0.063713554	0.116726572	0.58517874	rs2070074
+CCL27	Neuroblastoma	816	1	Wald ratio	-0.123603792	0.227812204	0.587426733	rs2070074
+CCL27	Diagnoses - main ICD10: M16 Coxarthrosis [arthrosis of hip]	UKB-a:562	1	Wald ratio	-0.060947153	0.114710452	0.59520191	rs2070074
+CCL27	Diagnoses - main ICD10: C61 Malignant neoplasm of prostate	UKB-a:520	1	Wald ratio	-0.094836204	0.178954617	0.596149681	rs2070074
+CCL27	Haemoglobin concentration	270	1	Wald ratio	0.017133956	0.032398754	0.596912178	rs2070074
+CCL27	Non-cancer illness code  self-reported: emphysema or chronic bronchitis	UKB-a:68	1	Wald ratio	0.055897591	0.105788745	0.597229491	rs2070074
+CCL27	Alzheimer's disease	297	1	Wald ratio	0.041433022	0.082242991	0.614410446	rs2070074
+CCL27	Diagnoses - main ICD10: K60 Fissure and fistula of anal and rectal regions	UKB-a:556	1	Wald ratio	0.084924078	0.180424222	0.637861331	rs2070074
+CCL27	Non-cancer illness code  self-reported: hiatus hernia	UKB-a:109	1	Wald ratio	0.03806292	0.081249551	0.639449021	rs2070074
+CCL27	Diagnoses - main ICD10: I80 Phlebitis and thrombophlebitis	UKB-a:537	1	Wald ratio	0.082986839	0.178671512	0.642313927	rs2070074
+CCL27	Diagnoses - main ICD10: K44 Diaphragmatic hernia	UKB-a:551	1	Wald ratio	-0.049541132	0.108923777	0.649235967	rs2070074
+CCL27	Diagnoses - main ICD10: G47 Sleep disorders	UKB-a:527	1	Wald ratio	-0.08509238	0.189217901	0.652922619	rs2070074
+CCL27	HOMA-IR	771	1	Wald ratio	-0.009345794	0.021183801	0.659085246	rs2070074
+CCL27	Non-cancer illness code  self-reported: bone disorder	UKB-a:84	1	Wald ratio	0.115538865	0.263225222	0.660708353	rs2070074
+CCL27	Eczema	996	1	Wald ratio	0.038703606	0.089174139	0.664271914	rs2070074
+CCL27	Hip osteoarthritis	1169	1	Wald ratio	0.062936783	0.153772377	0.682330257	rs2070074
+CCL27	Internalizing problems	1029	1	Wald ratio	0.045794393	0.114330218	0.688755176	rs2070074
+CCL27	Non-cancer illness code  self-reported: ankylosing spondylitis	UKB-a:88	1	Wald ratio	-0.11944976	0.302780651	0.693205118	rs2070074
+CCL27	Diagnoses - main ICD10: K29 Gastritis and duodenitis	UKB-a:547	1	Wald ratio	-0.033575385	0.08614167	0.696707094	rs2070074
+CCL27	Rheumatoid arthritis	833	1	Wald ratio	-0.031309457	0.080342136	0.696757228	rs2070074
+CCL27	Fractured bone site(s): Ankle	UKB-a:438	1	Wald ratio	0.040966557	0.105967607	0.699055992	rs2070074
+CCL27	Pulse rate	UKB-a:363	1	Wald ratio	-0.008578037	0.022679408	0.705259582	rs2070074
+CCL27	Non-cancer illness code  self-reported: gastro-oesophageal reflux (gord)  or  gastric reflux	UKB-a:70	1	Wald ratio	0.022506145	0.060328835	0.709105395	rs2070074
+CCL27	Non-cancer illness code  self-reported: bladder problem (not cancer)	UKB-a:73	1	Wald ratio	-0.069828041	0.187238958	0.709196505	rs2070074
+CCL27	Non-cancer illness code  self-reported: iron deficiency anaemia	UKB-a:89	1	Wald ratio	-0.073247312	0.197233904	0.710359864	rs2070074
+CCL27	Diagnoses - main ICD10: M54 Dorsalgia	UKB-a:569	1	Wald ratio	0.033410149	0.096886041	0.730214923	rs2070074
+CCL27	Diagnoses - main ICD10: Z09 Follow-up examination after treatment for conditions other than malignant neoplasms	UKB-a:594	1	Wald ratio	-0.036838441	0.109262531	0.735999838	rs2070074
+CCL27	Subjective well being	1009	1	Wald ratio	-0.00623053	0.018691589	0.73888268	rs2070074
+CCL27	Years of schooling	837	1	Wald ratio	0.00623053	0.018691589	0.73888268	rs2070074
+CCL27	Endometrioid ovarian cancer	1125	1	Wald ratio	0.049470405	0.155202492	0.749917999	rs2070074
+CCL27	Fractured bone site(s): Wrist	UKB-a:439	1	Wald ratio	-0.029776153	0.094832886	0.753532034	rs2070074
+CCL27	Diagnoses - main ICD10: R55 Syncope and collapse	UKB-a:587	1	Wald ratio	-0.043012615	0.14491675	0.766612234	rs2070074
+CCL27	Diagnoses - main ICD10: B37 Candidiasis	UKB-a:517	1	Wald ratio	0.243024139	0.858682984	0.777161791	rs2070074
+CCL27	Bipolar disorder	801	1	Wald ratio	0.032539744	0.122741433	0.790926213	rs2070074
+CCL27	Coronary heart disease	7	1	Wald ratio	0.01158567	0.046828349	0.804593117	rs2070074
+CCL27	2hr glucose	756	1	Wald ratio	-0.024299065	0.099688474	0.807424447	rs2070074
+CCL27	Non-cancer illness code  self-reported: mania or bipolar disorder or manic depression	UKB-a:83	1	Wald ratio	-0.070658941	0.297842802	0.812473955	rs2070074
+CCL27	Diagnoses - main ICD10: I84 Haemorrhoids	UKB-a:539	1	Wald ratio	0.017940461	0.081172995	0.825080641	rs2070074
+CCL27	Ovarian cancer	1120	1	Wald ratio	0.01476324	0.071370717	0.836124739	rs2070074
+CCL27	Neo-openness to experience	117	1	Wald ratio	0.07788162	0.378193146	0.83684496	rs2070074
+CCL27	Caudate volume	1044	1	Wald ratio	5.65576324	27.46760125	0.836863789	rs2070074
+CCL27	Cancer code  self-reported: small intestine or small bowel cancer	UKB-a:56	1	Wald ratio	0.204136316	0.998506202	0.838008338	rs2070074
+CCL27	Diagnoses - main ICD10: K43 Ventral hernia	UKB-a:550	1	Wald ratio	0.038369868	0.192687674	0.842161171	rs2070074
+CCL27	Diagnoses - main ICD10: K57 Diverticular disease of intestine	UKB-a:555	1	Wald ratio	0.017184237	0.089065427	0.847006367	rs2070074
+CCL27	Invasive mucinous ovarian cancer	1123	1	Wald ratio	-0.039345794	0.212087227	0.852823517	rs2070074
+CCL27	Neo-neuroticism	116	1	Wald ratio	-0.095015576	0.514018692	0.853347878	rs2070074
+CCL27	Neo-agreeableness	113	1	Wald ratio	0.060124611	0.329906542	0.855388573	rs2070074
+CCL27	Diagnoses - main ICD10: K40 Inguinal hernia	UKB-a:549	1	Wald ratio	-0.014375925	0.079712351	0.856879747	rs2070074
+CCL27	Diagnoses - main ICD10: K20 Oesophagitis	UKB-a:544	1	Wald ratio	0.022675986	0.128492593	0.859919222	rs2070074
+CCL27	Potassium in urine	UKB-a:334	1	Wald ratio	0.002282511	0.012939034	0.859975743	rs2070074
+CCL27	Non-cancer illness code  self-reported: osteoporosis	UKB-a:87	1	Wald ratio	0.016854571	0.101935245	0.868671765	rs2070074
+CCL27	Diagnoses - main ICD10: G56 Mononeuropathies of upper limb	UKB-a:528	1	Wald ratio	0.015774994	0.096575213	0.870247489	rs2070074
+CCL27	Myocardial infarction	798	1	Wald ratio	-0.008262087	0.051713721	0.873065518	rs2070074
+CCL27	Fasting proinsulin	769	1	Wald ratio	0.00529595	0.037383178	0.887343305	rs2070074
+CCL27	Non-cancer illness code  self-reported: arthritis (nos)	UKB-a:113	1	Wald ratio	0.020847572	0.147693975	0.887748409	rs2070074
+CCL27	Parkinson's disease	812	1	Wald ratio	-0.029736489	0.222276783	0.893575473	rs2070074
+CCL27	Diagnoses - main ICD10: R14 Flatulence and related conditions	UKB-a:584	1	Wald ratio	0.109091275	0.849338125	0.897798648	rs2070074
+CCL27	Diagnoses - main ICD10: L03 Cellulitis	UKB-a:560	1	Wald ratio	0.017534214	0.14306087	0.902451801	rs2070074
+CCL27	Ischemic stroke	1108	1	Wald ratio	-0.009968847	0.085981308	0.907698486	rs2070074
+CCL27	Cardioembolic stroke	1109	1	Wald ratio	-0.018380062	0.172274143	0.915034299	rs2070074
+CCL27	Eye problems or disorders: Glaucoma	UKB-a:424	1	Wald ratio	0.01138387	0.106962886	0.915242603	rs2070074
+CCL27	Platelet count	1008	1	Wald ratio	-0.239875389	2.292834891	0.916677689	rs2070074
+CCL27	Putamen volume	1047	1	Wald ratio	-3.414330218	33.61557632	0.919098084	rs2070074
+CCL27	Percent emphysema	1005	1	Wald ratio	0.00623053	0.062928349	0.921130409	rs2070074
+CCL27	Ferritin	1050	1	Wald ratio	-0.004672897	0.050778816	0.926678542	rs2070074
+CCL27	Non-cancer illness code  self-reported: polio  or  poliomyelitis	UKB-a:112	1	Wald ratio	0.064621572	0.736167123	0.930050647	rs2070074
+CCL27	Non-cancer illness code  self-reported: osteoarthritis	UKB-a:106	1	Wald ratio	0.003398364	0.042626013	0.936455872	rs2070074
+CCL27	Non-cancer illness code  self-reported: gout	UKB-a:107	1	Wald ratio	-0.008199604	0.109416192	0.940262782	rs2070074
+CCL27	Non-cancer illness code  self-reported: uterine fibroids	UKB-a:91	1	Wald ratio	0.007296871	0.103626502	0.943863272	rs2070074
+CCL27	LDL cholesterol	300	1	Wald ratio	0.001869159	0.02741433	0.9456409	rs2070074
+CCL27	Non-cancer illness code  self-reported: hayfever or allergic rhinitis	UKB-a:94	1	Wald ratio	0.00350582	0.052453229	0.946711417	rs2070074
+CCL27	Triglycerides	302	1	Wald ratio	0.001557632	0.024610592	0.949534671	rs2070074
+CCL27	Creatinine (enzymatic) in urine	UKB-a:333	1	Wald ratio	0.000696174	0.012202212	0.954502867	rs2070074
+CCL27	Non-cancer illness code  self-reported: retinal detachment	UKB-a:80	1	Wald ratio	-0.013717295	0.241734414	0.954748079	rs2070074
+CCL27	Diagnoses - main ICD10: N81 Female genital prolapse	UKB-a:577	1	Wald ratio	0.004917971	0.107548641	0.963527142	rs2070074
+CCL27	Sodium in urine	UKB-a:335	1	Wald ratio	-0.00039715	0.012545607	0.974746017	rs2070074
+CCL27	Diastolic blood pressure  automated reading	UKB-a:359	1	Wald ratio	-0.000334383	0.013074174	0.979595645	rs2070074
+CCL27	Sleep duration	UKB-a:9	1	Wald ratio	-0.000252278	0.009957352	0.979787087	rs2070074
+CCL27	Low grade serous ovarian cancer	1122	1	Wald ratio	0.002713084	0.258099688	0.991612977	rs2070074
+GDF11	Body mass index (BMI)	UKB-a:248	2	Inverse variance weighted	-0.0538694492288369	0.0101331487389648	1.05979438242905e-07	rs1815739
+GDF11	Eczema	996	2	Inverse variance weighted	0.264319276178811	0.0717936024124648	0.000231724831240012	rs1815739
+GDF11	Ulcerative colitis	970	1	Wald ratio	-0.221634204275534	0.0772638473657957	0.00412374973998942	rs1815739
+GDF11	Lung adenocarcinoma	965	2	Inverse variance weighted	-0.297393802042941	0.116480748436683	0.0106750933802658	rs1815739
+GDF11	Diagnoses - main ICD10: D25 Leiomyoma of uterus	UKB-a:522	2	Inverse variance weighted	-0.3036785921839	0.123458067575255	0.0139025636502649	rs1815739
+GDF11	Diastolic blood pressure  automated reading	UKB-a:359	2	Inverse variance weighted	-0.024306865883294	0.0103795058884052	0.0191903072147707	rs1815739
+GDF11	Neuroblastoma	816	2	Inverse variance weighted	-0.406617850160176	0.18246223155337	0.025846911283656	rs1815739
+GDF11	Fracture resulting from simple fall	UKB-a:332	2	Inverse variance weighted	-0.0632913985838151	0.0284950222489576	0.0263415640176574	rs1815739
+GDF11	Inflammatory bowel disease	294	1	Wald ratio	-0.128469714964371	0.0615243097998812	0.0367876369980142	rs1815739
+GDF11	Red blood cell count	275	2	Inverse variance weighted	-0.0176495452696613	0.00937525891978192	0.0597591847443196	rs1815739
+GDF11	Hip osteoarthritis	1169	2	Inverse variance weighted	0.239188447760992	0.127088437232808	0.0598274598197001	rs1815739
+GDF11	Diagnoses - main ICD10: R55 Syncope and collapse	UKB-a:587	2	Inverse variance weighted	0.166297152075136	0.0919518263461429	0.0705248711859508	rs1815739
+GDF11	Parkinson's disease	812	2	Inverse variance weighted	0.302143297340613	0.1730352727957	0.0807871436036108	rs1815739
+GDF11	Non-cancer illness code  self-reported: high cholesterol	UKB-a:108	2	Inverse variance weighted	-0.0502492535217262	0.028855273000865	0.0816093536028588	rs1815739
+GDF11	LDL cholesterol	300	2	Inverse variance weighted	-0.0385693975343284	0.0224216324443969	0.0853984805665446	rs1815739
+GDF11	Weight	UKB-a:249	2	Inverse variance weighted	-0.0361144868863789	0.0219685187859083	0.100192733199462	rs1815739
+GDF11	Non-cancer illness code  self-reported: hiatus hernia	UKB-a:109	2	Inverse variance weighted	-0.168796470514493	0.106977135778369	0.114594496063721	rs1815739
+GDF11	Thalamus volume	1048	2	Inverse variance weighted	55.7019875408935	35.3640176379721	0.115232559019709	rs1815739
+GDF11	Cancer code  self-reported: malignant melanoma	UKB-a:58	2	Inverse variance weighted	0.147665102377617	0.10039866315631	0.141348584287087	rs1815739
+GDF11	Chronic kidney disease	1102	2	Inverse variance weighted	0.0949795928263245	0.0650717739843729	0.144396525297941	rs1815739
+GDF11	Diagnoses - main ICD10: K80 Cholelithiasis	UKB-a:559	2	Inverse variance weighted	-0.110025987094438	0.0793752996590579	0.165701430525181	rs1815739
+GDF11	Subjective well being	1009	2	Inverse variance weighted	-0.026511536406341	0.0194200825719048	0.172202500635947	rs1815739
+GDF11	Non-cancer illness code  self-reported: hypertension	UKB-a:61	2	Inverse variance weighted	-0.0241395362205356	0.0177094729461908	0.17285538034982	rs1815739
+GDF11	Diagnoses - main ICD10: K57 Diverticular disease of intestine	UKB-a:555	2	Inverse variance weighted	0.0918661004988094	0.0681975372143456	0.177961258798402	rs1815739
+GDF11	Large vessel disease	1110	2	Inverse variance weighted	-0.199415103911471	0.148966279578457	0.18068159339681	rs1815739
+GDF11	Diagnoses - main ICD10: R04 Haemorrhage from respiratory passages	UKB-a:580	2	Inverse variance weighted	0.195233119238789	0.148543729147236	0.188740520708021	rs1815739
+GDF11	Internalizing problems	1029	2	Inverse variance weighted	0.123787057671412	0.0947283769284716	0.191294937569238	rs1815739
+GDF11	Diagnoses - main ICD10: K20 Oesophagitis	UKB-a:544	2	Inverse variance weighted	-0.159134756081886	0.122215922111196	0.192889463802276	rs1815739
+GDF11	Bulimia nervosa	990	2	Inverse variance weighted	-0.0392841583916176	0.0304850263396191	0.197524022974393	rs1815739
+GDF11	Diagnoses - main ICD10: I80 Phlebitis and thrombophlebitis	UKB-a:537	2	Inverse variance weighted	0.163108176537842	0.128587845950844	0.204634732792018	rs1815739
+GDF11	Non-cancer illness code  self-reported: diverticular disease or diverticulitis	UKB-a:102	2	Inverse variance weighted	-0.141023837336897	0.112009878110662	0.208019365575188	rs1815739
+GDF11	Diagnoses - main ICD10: K29 Gastritis and duodenitis	UKB-a:547	2	Inverse variance weighted	-0.0908604090095523	0.0722813102906564	0.208739598905401	rs1815739
+GDF11	Anorexia nervosa	45	2	Inverse variance weighted	0.152730956559645	0.122337334689916	0.211869566010972	rs1815739
+GDF11	Mean cell haemoglobin	271	2	Inverse variance weighted	0.0531747310615014	0.0429091769709703	0.215256954046177	rs1815739
+GDF11	Systolic blood pressure  automated reading	UKB-a:360	2	Inverse variance weighted	-0.0238885635273542	0.0193094371160157	0.216033449263034	rs1815739
+GDF11	2hr glucose	756	2	Inverse variance weighted	0.125491720420653	0.105423615064681	0.233906172312658	rs1815739
+GDF11	Amygdala volume	1043	2	Inverse variance weighted	-21.9344394290334	18.9471690559397	0.247001527195123	rs1815739
+GDF11	Non-cancer illness code  self-reported: uterine fibroids	UKB-a:91	2	Inverse variance weighted	-0.174274491771273	0.152711019947508	0.253784863187831	rs1815739
+GDF11	Fractured bone site(s): Ankle	UKB-a:438	2	Inverse variance weighted	-0.110049169639852	0.0977111347423893	0.26005103585208	rs1815739
+GDF11	Mean platelet volume	1006	2	Inverse variance weighted	0.00731780344066234	0.00651368689579461	0.261246300943987	rs1815739
+GDF11	Non-cancer illness code  self-reported: bone disorder	UKB-a:84	2	Inverse variance weighted	0.205764663121644	0.183283657338215	0.261583238199061	rs1815739
+GDF11	Diagnoses - main ICD10: R35 Polyuria	UKB-a:586	2	Inverse variance weighted	-0.245612939155446	0.219969666250672	0.264175484798769	rs1815739
+GDF11	Transferrin Saturation	1051	2	Inverse variance weighted	0.0471561782446859	0.0423629442200796	0.265645361898193	rs1815739
+GDF11	Eye problems or disorders: Glaucoma	UKB-a:424	2	Inverse variance weighted	0.11574792062742	0.104134931454658	0.266345157838396	rs1815739
+GDF11	Percent emphysema	1005	2	Inverse variance weighted	-0.0577684317984246	0.0534092147693649	0.279421772428165	rs1815739
+GDF11	Diagnoses - main ICD10: M17 Gonarthrosis [arthrosis of knee]	UKB-a:563	2	Inverse variance weighted	-0.103145713159663	0.0954781212976601	0.280005351971768	rs1815739
+GDF11	Heel bone mineral density (BMD) T-score  automated	UKB-a:500	2	Inverse variance weighted	0.0176215403616916	0.0164022953053752	0.282673098036321	rs1815739
+GDF11	Non-cancer illness code  self-reported: retinal detachment	UKB-a:80	2	Inverse variance weighted	-0.262586317661132	0.247106074779249	0.287942452418509	rs1815739
+GDF11	Neo-openness to experience	117	2	Inverse variance weighted	-0.362000807419683	0.340962119193444	0.288370133999771	rs1815739
+GDF11	Caudate volume	1044	2	Inverse variance weighted	21.9647409106512	20.8200259232141	0.291433813675428	rs1815739
+GDF11	Years of schooling	837	2	Inverse variance weighted	-0.0169543568244111	0.0163047981213599	0.298414938807543	rs1815739
+GDF11	Knee and hip osteoarthritis	1170	2	Inverse variance weighted	0.087734359850788	0.0845246984003588	0.299282597423711	rs1815739
+GDF11	Diagnoses - main ICD10: G56 Mononeuropathies of upper limb	UKB-a:528	2	Inverse variance weighted	-0.241873632006917	0.234366799862164	0.302057936891296	rs1815739
+GDF11	HOMA-B	770	2	Inverse variance weighted	-0.0193191448895055	0.0188810854287032	0.306212835301494	rs1815739
+GDF11	Multiple sclerosis	1025	1	Wald ratio	-0.100101645287546	0.0982472031255487	0.308262187130924	rs1815739
+GDF11	Mean cell volume	273	2	Inverse variance weighted	0.110414976417336	0.108886591449512	0.310565343362347	rs1815739
+GDF11	Diagnoses - main ICD10: M54 Dorsalgia	UKB-a:569	2	Inverse variance weighted	0.0743904586575391	0.0735224712520383	0.311630943480439	rs1815739
+GDF11	Femoral neck bone mineral density	980	2	Inverse variance weighted	-0.0326757321660381	0.0323153838686291	0.311944172060867	rs1815739
+GDF11	Non-cancer illness code  self-reported: joint disorder	UKB-a:86	2	Inverse variance weighted	0.13341187907177	0.132305754855244	0.313281493900951	rs1815739
+GDF11	Diagnoses - main ICD10: I84 Haemorrhoids	UKB-a:539	2	Inverse variance weighted	-0.078601328451885	0.077982880933098	0.313487801906298	rs1815739
+GDF11	HDL cholesterol	299	2	Inverse variance weighted	0.0200585363234723	0.0203790794117053	0.324982297566679	rs1815739
+GDF11	Diagnoses - main ICD10: I48 Atrial fibrillation and flutter	UKB-a:536	2	Inverse variance weighted	0.0866754596602761	0.0888317443600169	0.329200169018921	rs1815739
+GDF11	Rheumatoid arthritis	833	2	Inverse variance weighted	0.0777024930676867	0.0826844646855833	0.347347254821616	rs1815739
+GDF11	Forced expiratory volume in 1-second (FEV1)	UKB-a:337	2	Inverse variance weighted	0.0173116233583619	0.0184611080743836	0.348380718748459	rs1815739
+GDF11	Forced vital capacity (FVC)	UKB-a:336	2	Inverse variance weighted	0.0163111197738178	0.0174506982419663	0.349944341083556	rs1815739
+GDF11	Body fat	999	2	Inverse variance weighted	0.0225557154388718	0.0241951748713801	0.351212387858075	rs1815739
+GDF11	Diagnoses - main ICD10: I83 Varicose veins of lower extremities	UKB-a:538	2	Inverse variance weighted	0.0622815084128929	0.0668411579719781	0.351448266532196	rs1815739
+GDF11	Hearing difficulty or problems: Yes	UKB-a:257	2	Inverse variance weighted	-0.0373733408810055	0.0402308532569401	0.352903537163166	rs1815739
+GDF11	Iron	1049	2	Inverse variance weighted	0.039048263070677	0.0421747631052585	0.354514589186011	rs1815739
+GDF11	Diagnoses - main ICD10: R11 Nausea and vomiting	UKB-a:583	2	Inverse variance weighted	0.185284127004757	0.200866970811012	0.356308462198649	rs1815739
+GDF11	Diagnoses - main ICD10: M72 Fibroblastic disorders	UKB-a:572	2	Inverse variance weighted	-0.152891590774776	0.166201615510036	0.357616451246678	rs1815739
+GDF11	Putamen volume	1047	2	Inverse variance weighted	23.1942168109429	25.534313530627	0.363690786944091	rs1815739
+GDF11	Non-cancer illness code  self-reported: psoriasis	UKB-a:100	2	Inverse variance weighted	-0.0966120926922081	0.106555873322175	0.364575975856703	rs1815739
+GDF11	Birth length	29	2	Inverse variance weighted	-0.03651231275849	0.0419120162182131	0.383663661613211	rs1815739
+GDF11	Schizophrenia	22	2	Inverse variance weighted	-0.095611194163101	0.111145032685379	0.389657794525636	rs1815739
+GDF11	Neo-extraversion	115	2	Inverse variance weighted	-0.306153896193503	0.366281265300044	0.403242825981735	rs1815739
+GDF11	Serum cystatin C (eGFRcys)	1106	2	Inverse variance weighted	-0.00662988329861511	0.00795250397203761	0.404458511212969	rs1815739
+GDF11	Fasting insulin	775	2	Inverse variance weighted	-0.0116427046800165	0.0140467351331941	0.40718654091106	rs1815739
+GDF11	Diagnoses - main ICD10: K60 Fissure and fistula of anal and rectal regions	UKB-a:556	2	Inverse variance weighted	0.112960802479279	0.137070499530027	0.409878579374802	rs1815739
+GDF11	Eye problems or disorders: Injury or trauma resulting in loss of vision	UKB-a:425	2	Inverse variance weighted	0.105549940787048	0.128146747562079	0.410130153653901	rs1815739
+GDF11	Diagnoses - main ICD10: D12 Benign neoplasm of colon  rectum  anus and anal canal	UKB-a:521	2	Inverse variance weighted	-0.076637889899566	0.0933792842452408	0.411807949686924	rs1815739
+GDF11	Pulse rate	UKB-a:363	2	Inverse variance weighted	-0.0295583167745764	0.0369275729309911	0.42345575195976	rs1815739
+GDF11	Invasive mucinous ovarian cancer	1123	2	Inverse variance weighted	-0.134551786128193	0.168977086030074	0.425873736791861	rs1815739
+GDF11	Nucleus accumbens volume	1042	2	Inverse variance weighted	3.70849499738214	4.66207453349774	0.426345821702807	rs1815739
+GDF11	Diagnoses - main ICD10: R14 Flatulence and related conditions	UKB-a:584	2	Inverse variance weighted	0.291619531745738	0.36679819063756	0.426589761609806	rs1815739
+GDF11	Neuroticism	1007	2	Inverse variance weighted	0.0195229242774691	0.0245714532759776	0.426882984323674	rs1815739
+GDF11	Microalbuminuria	1097	2	Inverse variance weighted	0.0689107207894576	0.0896763896674792	0.442227175558448	rs1815739
+GDF11	Non-cancer illness code  self-reported: hyperthyroidism or thyrotoxicosis	UKB-a:76	2	Inverse variance weighted	-0.17852131852256	0.238428566441987	0.454013136437581	rs1815739
+GDF11	Coronary heart disease	7	2	Inverse variance weighted	-0.0289052936149238	0.0391618564090704	0.460454810231717	rs1815739
+GDF11	Cough on most days	UKB-a:258	2	Inverse variance weighted	0.0656311495616807	0.0895203824905776	0.463471844369077	rs1815739
+GDF11	Diagnoses - main ICD10: N20 Calculus of kidney and ureter	UKB-a:574	2	Inverse variance weighted	0.0824102322793906	0.112850568940436	0.46523140445909	rs1815739
+GDF11	Diagnoses - main ICD10: G47 Sleep disorders	UKB-a:527	2	Inverse variance weighted	0.0896945727495037	0.123086945529743	0.466179647751708	rs1815739
+GDF11	Packed cell volume	274	2	Inverse variance weighted	-0.0540051636192764	0.0749418623313888	0.471138756434524	rs1815739
+GDF11	Hippocampus volume	1045	2	Inverse variance weighted	-14.4097168374389	20.0462770670357	0.472250235944619	rs1815739
+GDF11	HOMA-IR	771	2	Inverse variance weighted	-0.0282762587587776	0.0394775370100033	0.473829599440713	rs1815739
+GDF11	Mean cell haemoglobin concentration	272	2	Inverse variance weighted	0.0103859558641737	0.0146743183092239	0.479091756416768	rs1815739
+GDF11	Non-cancer illness code  self-reported: bladder problem (not cancer)	UKB-a:73	2	Inverse variance weighted	-0.106611351640689	0.152131662197245	0.483438165680949	rs1815739
+GDF11	Non-cancer illness code  self-reported: sleep apnoea	UKB-a:69	2	Inverse variance weighted	-0.158831702844565	0.228074621450048	0.486176890415097	rs1815739
+GDF11	Ferritin	1050	2	Inverse variance weighted	-0.0343695382199927	0.0493833566070614	0.486445036550022	rs1815739
+GDF11	Age at menopause	1004	2	Inverse variance weighted	-0.0559606759943321	0.0815239906067993	0.49244073058712	rs1815739
+GDF11	Serum creatinine (eGFRcrea)	1105	2	Inverse variance weighted	-0.0058094093689603	0.00852968308445676	0.495819920894058	rs1815739
+GDF11	Celiac disease	1058	1	Wald ratio	-0.0708347438555452	0.106694774346793	0.506753817341352	rs1815739
+GDF11	Fasting proinsulin	769	2	Inverse variance weighted	-0.0220365379533172	0.0336664267149099	0.512754113363854	rs1815739
+GDF11	Diagnoses - main ICD10: L03 Cellulitis	UKB-a:560	2	Inverse variance weighted	0.124096364055723	0.190932493522094	0.515725230216604	rs1815739
+GDF11	Hirschsprung's disease	983	2	Inverse variance weighted	0.350543670200702	0.539393373100847	0.515766498541827	rs1815739
+GDF11	Birth weight	1084	2	Inverse variance weighted	-0.0110814141362154	0.0173345207427875	0.522648236896673	rs1815739
+GDF11	Juvenile idiopathic arthritis	279	1	Wald ratio	-0.20428400663499	0.321017032673526	0.524538542488231	rs1815739
+GDF11	Diagnoses - main ICD10: S66 Injury of muscle and tendon at wrist and hand level	UKB-a:591	2	Inverse variance weighted	-0.241629870362159	0.380631062407184	0.525549828870262	rs1815739
+GDF11	Vascular or heart problems diagnosed by doctor: Angina	UKB-a:436	2	Inverse variance weighted	0.0338039052026696	0.0551329306306211	0.539787369800392	rs1815739
+GDF11	Non-cancer illness code self-reported: pulmonary embolism (with or without) dvt	UKB-a:64	2	Inverse variance weighted	0.0653221765025873	0.106735768163714	0.540538461817021	rs1815739
+GDF11	Diagnoses - main ICD10: J33 Nasal polyp	UKB-a:541	2	Inverse variance weighted	0.0870940411552527	0.144643322150015	0.54708780162179	rs1815739
+GDF11	Non-cancer illness code  self-reported: chronic obstructive airways disease or copd	UKB-a:67	2	Inverse variance weighted	0.0964670347415201	0.16287089125622	0.553655446871295	rs1815739
+GDF11	Cigarettes smoked per day	961	2	Inverse variance weighted	0.395507809001595	0.68409431316193	0.563164153225185	rs1815739
+GDF11	Diagnoses - main ICD10: R10 Abdominal and pelvic pain	UKB-a:582	2	Inverse variance weighted	-0.0290804882200052	0.0505444639386881	0.565058212412891	rs1815739
+GDF11	Total cholesterol	301	2	Inverse variance weighted	-0.0125300119784587	0.0220131878854436	0.569217170660675	rs1815739
+GDF11	Glioma	1013	2	Inverse variance weighted	0.129854426858497	0.229115230589598	0.570874050878988	rs1815739
+GDF11	Childhood intelligence	16	2	Inverse variance weighted	0.0536662349281489	0.0947737676338529	0.571219620500869	rs1815739
+GDF11	Myocardial infarction	798	2	Inverse variance weighted	-0.0241278068598715	0.0432506306893735	0.576939829279117	rs1815739
+GDF11	Diagnoses - main ICD10: K40 Inguinal hernia	UKB-a:549	2	Inverse variance weighted	-0.0359576759699195	0.0645408528217191	0.577438287500554	rs1815739
+GDF11	Non-cancer illness code  self-reported: gout	UKB-a:107	2	Inverse variance weighted	0.0934314046075213	0.171868511208045	0.586702014686625	rs1815739
+GDF11	Diagnoses - main ICD10: H25 Senile cataract	UKB-a:529	2	Inverse variance weighted	0.0663695131499409	0.123081382120301	0.589726259649977	rs1815739
+GDF11	PGC cross-disorder traits	803	2	Inverse variance weighted	-0.039205804615887	0.0735896016299801	0.594197765246663	rs1815739
+GDF11	Low grade serous ovarian cancer	1122	2	Inverse variance weighted	0.108362122653304	0.203671009592942	0.594694895703891	rs1815739
+GDF11	Eye problems or disorders: Cataract	UKB-a:426	2	Inverse variance weighted	0.0528535121502746	0.0999909169103765	0.597094663383285	rs1815739
+GDF11	Diagnoses - main ICD10: R07 Pain in throat and chest	UKB-a:581	2	Inverse variance weighted	-0.0318626860691226	0.0605351092739076	0.598644689685512	rs1815739
+GDF11	Bipolar disorder	801	2	Inverse variance weighted	-0.166531705318674	0.31701360881275	0.59936488625871	rs1815739
+GDF11	Triglycerides	302	2	Inverse variance weighted	0.0104887578985816	0.0199704596219346	0.599434680128312	rs1815739
+GDF11	Gallbladder cancer	1057	2	Inverse variance weighted	-1.04685544696623	1.99444515805064	0.599662754008076	rs1815739
+GDF11	Non-cancer illness code  self-reported: asthma	UKB-a:66	2	Inverse variance weighted	-0.051602108221234	0.0983210956740616	0.599699623893062	rs1815739
+GDF11	Fractured bone site(s): Other bones	UKB-a:441	2	Inverse variance weighted	0.0384248047848118	0.0759925380033167	0.613109969908613	rs1815739
+GDF11	Haemoglobin concentration	270	2	Inverse variance weighted	-0.0116713234101718	0.0240495772290058	0.62746168042341	rs1815739
+GDF11	Diagnoses - main ICD10: C61 Malignant neoplasm of prostate	UKB-a:520	2	Inverse variance weighted	-0.0648421769557886	0.135712488695334	0.63279911819666	rs1815739
+GDF11	Amyotrophic lateral sclerosis	1086	2	Inverse variance weighted	-0.0549406438038124	0.115165993627917	0.633322149194912	rs1815739
+GDF11	Systemic lupus erythematosus	815	2	Inverse variance weighted	-0.105295243352459	0.224411674406923	0.638922590660093	rs1815739
+GDF11	Non-cancer illness code  self-reported: ankylosing spondylitis	UKB-a:88	2	Inverse variance weighted	-0.125432951780343	0.276034954304056	0.649533995510083	rs1815739
+GDF11	Neo-conscientiousness	114	2	Inverse variance weighted	0.159170455036895	0.353288534592077	0.652321447987461	rs1815739
+GDF11	Breast cancer (Combined Oncoarray; iCOGS; GWAS meta analysis)	1126	2	Inverse variance weighted	-0.0186525883329547	0.0426077221927601	0.661549518663758	rs1815739
+GDF11	Non-cancer illness code  self-reported: emphysema or chronic bronchitis	UKB-a:68	2	Inverse variance weighted	-0.0395469885998886	0.0921641370119841	0.667855526058313	rs1815739
+GDF11	Diagnoses - main ICD10: M16 Coxarthrosis [arthrosis of hip]	UKB-a:562	2	Inverse variance weighted	-0.0919585449532463	0.219188550108008	0.674820925639585	rs1815739
+GDF11	Creatinine (enzymatic) in urine	UKB-a:333	2	Inverse variance weighted	-0.00922209942005596	0.0222836769358911	0.678983972753207	rs1815739
+GDF11	Non-cancer illness code  self-reported: anxiety or panic attacks	UKB-a:82	2	Inverse variance weighted	0.0349245071928735	0.0850536228754002	0.681353019193646	rs1815739
+GDF11	Sleep duration	UKB-a:9	2	Inverse variance weighted	-0.00320579458885484	0.00791230311894076	0.685355645349727	rs1815739
+GDF11	Non-cancer illness code  self-reported: hypothyroidism or myxoedema	UKB-a:77	2	Inverse variance weighted	0.0179513836430076	0.0443495375893133	0.685646229220387	rs1815739
+GDF11	Autism	802	2	Inverse variance weighted	-0.0474709233421916	0.119079069327236	0.690150790367771	rs1815739
+GDF11	Non-cancer illness code  self-reported: osteoarthritis	UKB-a:106	2	Inverse variance weighted	-0.0177776371006	0.0458827140548672	0.698416971200303	rs1815739
+GDF11	Intracranial volume	1041	1	Wald ratio	-4564.33015695067	11853.8481090646	0.7002	rs1815739
+GDF11	Pallidum volume	1046	2	Inverse variance weighted	3.12630793417641	8.1706240679438	0.701995752624184	rs1815739
+GDF11	Diagnoses - main ICD10: C50 Malignant neoplasm of breast	UKB-a:519	2	Inverse variance weighted	-0.0307665733196618	0.0823686192559163	0.708759234534547	rs1815739
+GDF11	Diagnoses - main ICD10: Z09 Follow-up examination after treatment for conditions other than malignant neoplasms	UKB-a:594	2	Inverse variance weighted	0.0297230054176538	0.0806743691969274	0.71255126770996	rs1815739
+GDF11	Non-cancer illness code  self-reported: kidney stone or ureter stone or bladder stone	UKB-a:72	2	Inverse variance weighted	0.103716622886151	0.28858547289928	0.719298456444132	rs1815739
+GDF11	ER-positive Breast cancer (Combined Oncoarray; iCOGS; GWAS meta analysis)	1127	2	Inverse variance weighted	-0.0170748334312829	0.0475984158776646	0.719799382911005	rs1815739
+GDF11	Alcohol intake frequency	UKB-a:25	2	Inverse variance weighted	0.00531463114641837	0.0149846850300315	0.722836182873211	rs1815739
+GDF11	Knee osteoarthritis	1171	2	Inverse variance weighted	-0.0600992116459872	0.173072775342024	0.728404854230065	rs1815739
+GDF11	Major depressive disorder	805	2	Inverse variance weighted	0.0313268139055604	0.0906706387506453	0.729717613156164	rs1815739
+GDF11	Age at menarche	1095	2	Inverse variance weighted	-0.0149080136578812	0.0444433658729957	0.737294369175088	rs1815739
+GDF11	Forearm bone mineral density	977	2	Inverse variance weighted	-0.0215044900361026	0.0658935372073088	0.74415802221351	rs1815739
+GDF11	Small vessel disease	1111	2	Inverse variance weighted	-0.100306275403909	0.321069923880574	0.754727009674479	rs1815739
+GDF11	Endometrioid ovarian cancer	1125	2	Inverse variance weighted	0.0513163804015564	0.164868210602279	0.755605273252424	rs1815739
+GDF11	Fasting glucose	773	2	Inverse variance weighted	-0.00615592133889226	0.0207414184828868	0.766624052211949	rs1815739
+GDF11	Lumbar spine bone mineral density	982	2	Inverse variance weighted	0.0111305067082589	0.0383905839165229	0.77187129049295	rs1815739
+GDF11	Diagnoses - main ICD10: N92 Excessive  frequent and irregular menstruation	UKB-a:578	2	Inverse variance weighted	-0.020782903665726	0.0725230238093615	0.774441791359707	rs1815739
+GDF11	HbA1C	758	2	Inverse variance weighted	-0.00689991507715658	0.0253316016504157	0.785327013897744	rs1815739
+GDF11	Non-cancer illness code  self-reported: migraine	UKB-a:78	2	Inverse variance weighted	-0.0489091767274641	0.179762841673003	0.785563489591382	rs1815739
+GDF11	Crohn's disease	12	1	Wald ratio	-0.019654809976247	0.0743990878260095	0.791640610901671	rs1815739
+GDF11	Squamous cell lung cancer	967	2	Inverse variance weighted	-0.029733186963801	0.119543522028634	0.803575292365233	rs1815739
+GDF11	Depressive symptoms	1000	2	Inverse variance weighted	0.00480385243353379	0.0196816756572806	0.80717086716619	rs1815739
+GDF11	Diagnoses - main ICD10: K44 Diaphragmatic hernia	UKB-a:551	2	Inverse variance weighted	-0.0289471169416256	0.118708838476166	0.807347211919162	rs1815739
+GDF11	Neo-agreeableness	113	2	Inverse variance weighted	-0.0717715580068956	0.298728630168814	0.810131252251887	rs1815739
+GDF11	Transferrin	1052	2	Inverse variance weighted	-0.0149798734029028	0.0623576554996714	0.810155764092378	rs1815739
+GDF11	Diagnoses - main ICD10: N40 Hyperplasia of prostate	UKB-a:576	2	Inverse variance weighted	0.0317439630190694	0.138486417839092	0.818697331931358	rs1815739
+GDF11	ER-negative Breast cancer (Combined Oncoarray; iCOGS; GWAS meta analysis)	1128	2	Inverse variance weighted	-0.0129771743746796	0.060665698590749	0.830614994997608	rs1815739
+GDF11	Ischemic stroke	1108	2	Inverse variance weighted	0.0423621950277134	0.198816585389114	0.83127100971048	rs1815739
+GDF11	Non-cancer illness code  self-reported: osteoporosis	UKB-a:87	2	Inverse variance weighted	-0.0232221431092917	0.116173656017742	0.841565325560208	rs1815739
+GDF11	Non-cancer illness code  self-reported: iron deficiency anaemia	UKB-a:89	2	Inverse variance weighted	0.031629719972256	0.162969223759059	0.846110104052339	rs1815739
+GDF11	Non-cancer illness code  self-reported: deep venous thrombosis (dvt)	UKB-a:65	2	Inverse variance weighted	0.0158366563477131	0.0852568711918897	0.85263904530904	rs1815739
+GDF11	Clear cell ovarian cancer	1124	2	Inverse variance weighted	0.042641535872132	0.256137117702013	0.867779748052328	rs1815739
+GDF11	Diagnoses - main ICD10: I30 Acute pericarditis	UKB-a:535	2	Inverse variance weighted	0.159335752569531	1.0213957682366	0.876034554847879	rs1815739
+GDF11	Cancer code  self-reported: basal cell carcinoma	UKB-a:59	2	Inverse variance weighted	0.0160957457397335	0.105529165911343	0.878773548741229	rs1815739
+GDF11	Urinary albumin-to-creatinine ratio	1107	2	Inverse variance weighted	-0.00391057619211731	0.0258697257228118	0.879846196116163	rs1815739
+GDF11	Eye problems or disorders: Diabetes related eye disease	UKB-a:423	2	Inverse variance weighted	0.0185307114780922	0.130096055092313	0.886733504837749	rs1815739
+GDF11	Primary sclerosing cholangitis 	1112	2	Inverse variance weighted	0.0202970138133592	0.146808408792977	0.890038795799142	rs1815739
+GDF11	Non-cancer illness code  self-reported: vaginal prolapse or uterine prolapse	UKB-a:92	2	Inverse variance weighted	0.0428438673443499	0.325725228965198	0.895353074047556	rs1815739
+GDF11	Diagnoses - main ICD10: K43 Ventral hernia	UKB-a:550	2	Inverse variance weighted	0.0200252456621861	0.15338838601575	0.896129277213295	rs1815739
+GDF11	IgA nephropathy	1081	2	Inverse variance weighted	-0.0429612078050145	0.334167611762083	0.897704351635834	rs1815739
+GDF11	Diagnoses - main ICD10: M23 Internal derangement of knee	UKB-a:566	2	Inverse variance weighted	0.00790814433809059	0.0679991462310124	0.907416608035751	rs1815739
+GDF11	Fractured or broken bones in last 5 years	UKB-a:308	2	Inverse variance weighted	-0.0055496857068489	0.0483962735076988	0.908705301011224	rs1815739
+GDF11	Paget's disease	975	2	Inverse variance weighted	-0.0244343834433654	0.25133892617792	0.922554172029685	rs1815739
+GDF11	Diagnoses - main ICD10: K35 Acute appendicitis	UKB-a:548	2	Inverse variance weighted	0.0130019486230811	0.147528758543748	0.929772064292792	rs1815739
+GDF11	Sodium in urine	UKB-a:335	2	Inverse variance weighted	0.00140867406810819	0.0164376074289493	0.931706299245827	rs1815739
+GDF11	Urate	1055	2	Inverse variance weighted	0.00432270973351693	0.0506037319537008	0.931925310682318	rs1815739
+GDF11	Thyroid cancer	1082	2	Inverse variance weighted	0.0301844472450178	0.353420292485479	0.931938097499902	rs1815739
+GDF11	Non-cancer illness code  self-reported: muscle or soft tissue injuries	UKB-a:96	2	Inverse variance weighted	-0.0101390985280156	0.123178507615187	0.934398423621173	rs1815739
+GDF11	Non-cancer illness code  self-reported: hayfever or allergic rhinitis	UKB-a:94	2	Inverse variance weighted	-0.00623335777920318	0.0764460760554971	0.935013090239941	rs1815739
+GDF11	Cardioembolic stroke	1109	2	Inverse variance weighted	-0.0114930662649661	0.144246575383604	0.936494528239125	rs1815739
+GDF11	Non-cancer illness code  self-reported: depression	UKB-a:81	2	Inverse variance weighted	0.00646990423778844	0.0829739328764209	0.93784782620653	rs1815739
+GDF11	Non-cancer illness code  self-reported: enlarged prostate	UKB-a:95	2	Inverse variance weighted	0.00674496853467325	0.0868548267756847	0.93810013730763	rs1815739
+GDF11	Potassium in urine	UKB-a:334	2	Inverse variance weighted	-0.00142029189748697	0.0201812244601155	0.943893681443509	rs1815739
+GDF11	Non-cancer illness code  self-reported: pernicious anaemia	UKB-a:90	2	Inverse variance weighted	0.0133614442109847	0.192734043475643	0.944730279548679	rs1815739
+GDF11	Non-cancer illness code  self-reported: arthritis (nos)	UKB-a:113	2	Inverse variance weighted	-0.00807063388854341	0.119683320974394	0.946236809164622	rs1815739
+GDF11	Non-cancer illness code  self-reported: gastro-oesophageal reflux (gord)  or  gastric reflux	UKB-a:70	2	Inverse variance weighted	-0.00284438423384618	0.0490908705551053	0.953795460752825	rs1815739
+GDF11	Happiness	UKB-a:367	2	Inverse variance weighted	-0.00176770596537106	0.0312342639599451	0.954867746260652	rs1815739
+GDF11	Height	89	2	Inverse variance weighted	0.00217179710104767	0.0409526803543067	0.957706517172884	rs1815739
+GDF11	Platelet count	1008	2	Inverse variance weighted	-0.124893560864603	2.35813477460349	0.957761499945289	rs1815739
+GDF11	Fractured bone site(s): Arm	UKB-a:440	2	Inverse variance weighted	0.00492840894345694	0.102824357848659	0.961771739881734	rs1815739
+GDF11	Diagnoses - main ICD10: N81 Female genital prolapse	UKB-a:577	2	Inverse variance weighted	0.00406898797512403	0.0850641557262989	0.961848266369304	rs1815739
+GDF11	Neo-neuroticism	116	2	Inverse variance weighted	0.0212197247250035	0.455031631396093	0.962805319416005	rs1815739
+GDF11	High grade serous ovarian cancer	1121	2	Inverse variance weighted	-0.00302385816554319	0.0673486401809715	0.964188150399207	rs1815739
+GDF11	Pancreatic cancer	822	2	Inverse variance weighted	0.00680080059855053	0.233008237560063	0.976715486387976	rs1815739
+GDF11	Type 2 diabetes	23	2	Inverse variance weighted	-0.00491131399946493	0.170324369501425	0.97699613592009	rs1815739
+GDF11	Fractured bone site(s): Wrist	UKB-a:439	2	Inverse variance weighted	-0.00120878460161323	0.102831912380311	0.990621118118838	rs1815739
+GDF11	Ovarian cancer	1120	2	Inverse variance weighted	0.000786959929151411	0.0974958675049262	0.993559764374583	rs1815739
+GDF11	Diagnoses - main ICD10: S76 Injury of muscle and tendon at hip and thigh level	UKB-a:592	2	Inverse variance weighted	0.0050471587787438	0.87637994112659	0.995404929282835	rs1815739

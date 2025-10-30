@@ -1,0 +1,7 @@
+ClinGen.Gene	ClinGen.Disease	ClinGen.Inheritance	ClinGen.MONDO	ClinGen.Classification
+BRCA2	Fanconi anemia complementation group D1	AR	0011584	Definitive 
+BRCA2	BRCA2-related cancer predisposition	AD	0700269	Definitive 
+BRCA2	Fanconi anemia complementation group A		0009215	
+BRCA2	Fanconi anemia		0019391	
+BRCA2	hereditary breast ovarian cancer syndrome		0003582	
+BRCA2	breast-ovarian cancer, familial, susceptibility to, 2		0012933	

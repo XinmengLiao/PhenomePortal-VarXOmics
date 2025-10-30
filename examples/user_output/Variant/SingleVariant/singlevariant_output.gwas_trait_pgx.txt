@@ -1,2 +1,0 @@
-Variant	Disease/Traits	Chr	Pos	Risk allele frequency	P-value	Odd ratio/beta	95% Confidence Interval	Source	Genes	Traits	Category	Genotype description	Trait details	Gene	Drug.s.	Phenotype.s.	Level.of.Evidence	Level.Modifiers	Genotype.Allele	Annotation.Text	Allele.Function	Specialty.Population
-NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
