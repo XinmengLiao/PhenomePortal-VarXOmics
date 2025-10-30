@@ -12,6 +12,9 @@ VarXOmics supports **multi-sample CNV (Copy Number Variant)** and **SV (Structur
   - HPO ID, separated by comma. (e.g., HP:0031218,HP:0002071) 
 - After configuration, click **Start Analysis** to begin.
 
+<img width="60%" src="https://github.com/user-attachments/assets/a3a31be2-ef6c-43f0-9f6d-05c6d8871259" />
+
+<br>
 
 ### 2. Results Overview
 
