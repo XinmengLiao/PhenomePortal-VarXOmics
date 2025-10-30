@@ -24,7 +24,7 @@ theme:
 nav:
   - Home: Intro.md
   - Tutorials:
-      - Small Variant Query: Functions/Variant Query.md
+      - Small Variant Query: Functions/Small Variant Query.md
       - Structural Variant Query: Functions/CNV and SV Query.md
       - Small Variant Interpretation: Functions/Small Variant Interpretation.md
       - Gene Query: Functions/Gene Query.md
