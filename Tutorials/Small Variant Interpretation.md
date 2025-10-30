@@ -9,6 +9,8 @@ This module allows users to upload VCF files, configure advanced filtering param
 - Drop and upload a **VCF file**.  
 - Click **Run** to proceed to the variant filtering configuration window.
 
+<img width="60%" src="https://github.com/user-attachments/assets/9c37f2db-ab7e-4c04-951d-db788373fcef" />
+
 
 ### 2. Variant Filtering Settings
 
@@ -114,7 +116,9 @@ This section displays all filtered variants prioritized by the VarXOmics strateg
   - **Clinical Pathogenicity**  
   - **Affected Genes**
 
-These visual overviews allow users to rapidly assess the biological and clinical relevance of the prioritized variants.
+These visual overviews allow users to rapidly assess the biological and clinical relevance of the prioritized variants.  
+
+<img width="90%" src="https://github.com/user-attachments/assets/0e3f9b39-147b-4f3f-901b-56a42b6fe1ff" />
 
 ---
 
@@ -160,6 +164,9 @@ This section performs functional enrichment for all genes linked to the filtered
 
 The enrichment section provides direct insight into the biological themes underlying the filtered variant set.
 
+<img width="100%" src="https://github.com/user-attachments/assets/6971a902-0810-4f0d-8c8b-0dc60ae77bfc" />
+
+
 ---
 
 #### 📚 GWAS & QTL Associations
@@ -196,11 +203,12 @@ This network provides an integrated, evidence-weighted visualization of how vari
 - **Table View:**  
   Click the **table icon** in the bottom-right corner to open a structured view of the network, allowing users to inspect and filter interaction data directly.
 
----
-
 ✅ **Tip:**  
 Users can combine interaction filters and weight thresholds to create **focused sub-networks**, such as *gene–drug pharmacogenomic networks* or *variant–phenotype associations* for specific pathways.
 
+<img width="100%" src="https://github.com/user-attachments/assets/fd1a0e3d-1ad4-4de6-93fb-b363d3b144d0" />
+
+---
 
 #### 🧠 Exomiser
 
@@ -210,6 +218,9 @@ This section presents:
 - Ranked list of candidate genes and variants associated with input HPO phenotypes.  
 - Exomiser scores indicating phenotype similarity and variant pathogenicity.  
 - Cross-references with ClinVar and other annotations for interpretation consistency.
+
+<img width="100%" src="https://github.com/user-attachments/assets/df783ae6-6132-4637-997d-2036a552fe3c" />
+
 
 ---
 
