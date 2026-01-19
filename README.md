@@ -3,7 +3,6 @@
 
 📍 **Access VarXOmics:** [https://www.phenomeportal.org/varxomics](https://www.phenomeportal.org/varxomics)  
 
-<br>
 
 <img width="732" height="503" alt="image" src="https://github.com/user-attachments/assets/38341a95-0609-4ba3-80f9-0747c9c6f6c2" />
 
@@ -30,9 +29,12 @@
    All tables and plots are exportable (PNG, PDF, TSV) for seamless downstream analysis and reporting.  
 
 ### 📘 Tutorials
-The full tutorial documentation could be found: 
+- The full tutorial documentation could be found: 
    - [Documentataion](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Intro/)
    - [Wiki](https://github.com/XinmengLiao/PhenomePortal-VarXOmics/wiki)
+- The step-by-step video tutorial could be found:
+   - [Video](https://www.youtube.com/watch?v=gbf-nyAmVI4) 
+
 
 Each module of VarXOmics is documented with step-by-step Markdown guides:
 
