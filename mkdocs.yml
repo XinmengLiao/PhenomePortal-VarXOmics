@@ -22,14 +22,14 @@ theme:
 # ✅ no need for docs_dir — MkDocs uses 'docs/' by default
 
 nav:
-  - Home: Intro.md
+  - Home: docs/Intro.md
   - Tutorials:
-      - Small Variant Query: Functions/Small Variant Query.md
-      - Structural Variant Query: Functions/CNV and SV Query.md
-      - Small Variant Interpretation: Functions/Small Variant Interpretation.md
-      - Gene Query: Functions/Gene Query.md
-      - CNVs and SVs Interpretation: Functions/CNVs and SVs intrepretation.md
-  - Data Access: Data Access.md
+      - Small Variant Query: docs/Functions/Small Variant Query.md
+      - Structural Variant Query: docs/Functions/CNV and SV Query.md
+      - Small Variant Interpretation: docs/Functions/Small Variant Interpretation.md
+      - Gene Query: docs/Functions/Gene Query.md
+      - CNVs and SVs Interpretation: docs/Functions/CNVs and SVs intrepretation.md
+  - Data Access: docs/Data Access.md
      
 
 markdown_extensions:
