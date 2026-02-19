@@ -36,8 +36,8 @@ Each module of VarXOmics is documented with explicit Markdown guides:
 
 | Module | Description | Tutorial |
 |:-------|:-------------|:----------|
-| **Single Variant Query** | Query and annotate individual SNPs or INDELs. | [View Tutorial ›]([https://github.com/XinmengLiao/PhenomePortal-VarXOmics/blob/main/Tutorials/Variant%20Query.md](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20Variant%20Query/)) |
-| **CNV/SV Query** | Annotate and visualize structural variants (CNVs, SVs). | [View Tutorial ›]([https://github.com/XinmengLiao/PhenomePortal-VarXOmics/blob/main/Tutorials/Variant%20Query.md](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNV%20and%20SV%20Query/)) |
+| **Single Variant Query** | Query and annotate individual SNPs or INDELs. | [View Tutorial ›](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20Variant%20Query/) |
+| **CNV/SV Query** | Annotate and visualize structural variants (CNVs, SVs). | [View Tutorial ›](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNV%20and%20SV%20Query/) |
 | **Gene Query** | Explore clinical and omics evidence for a given gene. | [View Tutorial ›](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Gene%20Query/) |
 | **Multi-Variant Analysis** | Upload and filter VCF files for cohort-wide analysis. | [View Tutorial ›](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/Small%20Variant%20Interpretation.md) |
 | **Multi SV/CNV Analysis** | Visualize and interpret multi-sample CNV/SV datasets. | [View Tutorial ›](https://xinmengliao.github.io/PhenomePortal-VarXOmics/Functions/CNVs%20and%20SVs%20intrepretation/) |
