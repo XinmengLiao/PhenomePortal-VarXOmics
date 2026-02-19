@@ -48,3 +48,8 @@ Each module of VarXOmics is documented with step-by-step Markdown guides:
 
 ### 📂 Data Access: 
 [Data Access Documentation ›](https://github.com/XinmengLiao/PhenomePortal-VarXOmics/tree/main/Data%20Access)
+
+<br>
+
+### 🔗 Cite Us!
+Liao, X., Song, X., Green, E., Zhang, C., Türkez, H., & Mardinoglu, A. (2026). VarXOmics: A Versatile Web Server for Genomic Data Querying, Analysis, and Variant Prioritization With Multi-omics Insights. Journal of molecular biology, 169667. Advance online publication. https://doi.org/10.1016/j.jmb.2026.169667
